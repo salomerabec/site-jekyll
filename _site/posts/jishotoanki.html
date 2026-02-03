@@ -4,67 +4,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jisho to Anki</title>
+
+  <title>Salomé RABEC</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <script src="nuit.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="article.css">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/carousel.css">
+  <link rel="stylesheet" href="/assets/css/article.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/contact.css">
+  <link rel="stylesheet" href="/assets/css/amenagements.css">
 
+
+  <!-- JS global -->
+  <script src="/assets/js/nuit.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/navtel.js"></script>
+  <script src="/assets/js/recherche.js"></script>
+  <script src="/assets/js/carousel.js"></script>
+  <script src="/assets/js/lightbox.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script src="/assets/js/index.js"></script>
+
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 </head>
 
 <body>
 
+  <!-- HEADER MOBILE -->
+<header class="mobile-header">
+  <button id="menu-btn" aria-label="Ouvrir le menu">☰</button>
+  <span class="logo">Menu</span>
 
-  <div id="loader">
-    <div class="spinner"></div>
+  <button id="modeNuitButton">
+    <!-- Lune pour desktop et mobile -->
+    <img src="/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
+    <img src="/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
+
+    <!-- Soleil unique -->
+    <img src="/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
+  </button>
+</header>
+
+<!-- MENU MOBILE -->
+<nav id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="/index.html">Mon parcours</a></li>
+
+    <li class="menu-title">► Projets</li>
+    <li><a href="/posts/site.html">Création du site</a></li>
+    <li><a href="/posts/accessibilite.html">Accessibilité</a></li>
+    <li><a href="/posts/renneslogements.html">Étude logements</a></li>
+    <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
+    <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+    <li class="menu-divider"></li>
+
+    <li class="menu-title">► Passions</li>
+    <li><a href="/patisserie.html">Pâtisserie</a></li>
+    <li><a href="/jardin.html">Jardinage</a></li>
+    <li class="menu-divider"></li>
+
+    <li><a href="/amenagements.html">Aménagements</a></li>
+    <li><a href="/contact.html">Contacts</a></li>
+  </ul>
+</nav>
+
+<div id="overlay"></div>
+
+<!-- MENU PC -->
+<nav>
+  <a href="/index.html">Mon parcours</a>
+
+  <div class="dropdown">
+    <button class="dropbtn" id="btn-projets"
+      aria-haspopup="true"
+      aria-controls="menu-projets"
+      aria-expanded="false">
+      Projets ▾
+    </button>
+
+    <ul class="dropdown-content" id="menu-projets" hidden>
+      <li><a href="/posts/site.html">Création du site</a></li>
+      <li><a href="/posts/accessibilite.html">Accessibilité du site</a></li>
+      <li><a href="/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+      <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
+      <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+    </ul>
   </div>
 
-
-
-  <nav>
-    <a href="index.html">Mon parcours</a>
-
-    <div class="dropdown">
-      <button class="dropbtn" id="btn-projets" aria-haspopup="true" aria-controls="menu-projets" aria-expanded="false">
-        Projets ▾
-      </button>
-
-      <ul class="dropdown-content" id="menu-projets" hidden>
-        <li><a href="site.html">Création du site</a></li>
-        <li><a href="accessibilite.html">Accessibilité du site</a></li>
-        <li><a href="renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
-        <li><a href="jishotoanki.html">Jisho to Anki</a></li>      
-        <li><a style="text-decoration: underline;" href="projet.html">Voir tout</a></li>  
-      </ul>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="btn-passions" type="button" aria-haspopup="true" aria-controls="menu-passions"
-        aria-expanded="false">
-        Passions ▾
-      </button>
-
-      <ul class="dropdown-content" id="menu-passions" hidden>
-        <li><a href="patisserie.html">Pâtisserie</a></li>
-        <li><a href="jardin.html">Jardinage</a></li>
-      </ul>
-    </div>
-    <a href="amenagements.html">Aménagements</a>
-
-    <a href="contact.html">Contacts</a>
-  </nav>
-
-
-
-
-  <section id="lune" class="section lune">
-    <button id="modeNuitButton">
-      <img src="moon.svg" alt="Bouton mode nuit" id="luneIcon">
+  <div class="dropdown">
+    <button class="dropbtn" id="btn-passions"
+      type="button"
+      aria-haspopup="true"
+      aria-controls="menu-passions"
+      aria-expanded="false">
+      Passions ▾
     </button>
-  </section>
+
+    <ul class="dropdown-content" id="menu-passions" hidden>
+      <li><a href="/patisserie.html">Pâtisserie</a></li>
+      <li><a href="/jardin.html">Jardinage</a></li>
+    </ul>
+  </div>
+
+  <a href="/amenagements.html">Aménagements</a>
+  <a href="/contact.html">Contacts</a>
+
+  <!-- BOUTON MODE NUIT -->
+  <button id="modeNuitButton">
+    <img src="/assets/img/moon.svg" alt="Bouton mode nuit" id="luneIcon">
+  </button>
+</nav>
 
 
-  <section id="article" class="section article">
+  <main>
+      <section id="article" class="section article">
 
     <h2>Jisho to Anki</h2>
     <h3>Prototype d'une extension firefox de dictionnaire reliée à Anki</h3>
@@ -121,20 +183,43 @@ Langages utilisés :  <br>
   </section>
 
 
+
 <!-- Fenêtre Lightbox cachée au départ -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="close">&times;</span>
-  <img id="lightbox-img" src="" alt="">
+<div
+  id="lightbox"
+  class="lightbox"
+  onclick="closeLightbox()"
+  onkeydown="if(event.key === 'Enter' || event.key === ' ') closeLightbox()"
+  tabindex="0"
+  role="dialog"
+  aria-modal="true"
+>
+  <span
+    class="close"
+    tabindex="0"
+    role="button"
+    aria-label="Fermer la lightbox"
+    >&times;</span
+  >
+  <img id="lightbox-img" src="" alt="" />
 </div>
 
 
 
+  </main>
+
+  
+
   <section id="projets" class="section projets">
 
+
+
+
     <h2><br><br>
-      Autres Projets
+      Mes Projets
       <br><br>
     </h2>
+
 
     <!-- Barre de recherche -->
     <input type="text" id="searchBar" placeholder="Rechercher un projet..." />
@@ -194,37 +279,34 @@ Langages utilisés :  <br>
   </section>
 
 
-
-
-
   <section id="contact" class="section contact">
-    <h2><br><br>Contacts<br></h2>
-    <div class="contact-links">
+  <h2><br><br>Contacts<br></h2>
+  <div class="contact-links">
+
+    <!-- Email -->
+    <a href="mailto:salomerabec@aliceadsl.fr">
+      <img src="/assets/img/mail.svg" alt="Email" id="mail">
+    </a>
+
+    <!-- LinkedIn (externe) -->
+    <a href="https://www.linkedin.com/in/salomerabec/" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/img/link.svg" alt="Lien LinkedIn" id="link">
+    </a>
+
+    <!-- GitHub (externe) -->
+    <a href="https://github.com/salomerabec" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/img/git.svg" alt="Lien GitHub" id="git">
+    </a>
+
+  </div>
+  <br><br><br>
+</section>
 
 
-      <a href="mailto:salomerabec@aliceadsl.fr">
-        <img src="mail.svg" alt="Email" id="mail">
-      </a>
-      <a href="https://www.linkedin.com/in/salomerabec/" target="_blank">
-        <img src="link.svg" alt="lien LinkedIn" id="link">
-      </a>
-      <a href="https://github.com/salomerabec" target="_blank">
-        <img src="git.svg" alt="Lien GitHub" id="git">
-      </a>
-
-    </div>
-    <br><br><br>
-  </section>
-
-  <footer>
+    <footer>
     &copy; <span id="year"></span> Salomé RABEC | Fait main, avec passion et curiosité 🌱 | Tous droits réservés
   </footer>
 
-  <script src="script.js"></script>
-  <script src="nav.js">    </script>
-      <script src="lightbox.js"></script>
-<script src="recherche.js"></script>
 
 </body>
-
 </html>
