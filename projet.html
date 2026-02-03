@@ -1,17 +1,9 @@
----
-layout: projet  
-title: Projets
-css: /assets/css/index.css
-js: /assets/js/index.js
----
+<section id="projets" class="section projets">
 
-        <section id="projets" class="section projets">
+    <h2><br><br>
+        Mes Projets
+    <br><br></h2>
 
-            <h2><br><br>
-                Mes Projets
-            <br><br></h2>
-    
-            
     <!-- Barre de recherche -->
     <input type="text" id="searchBar" placeholder="Rechercher un projet..." />
 
@@ -23,69 +15,47 @@ js: /assets/js/index.js
       <option value="crypto">Cryptographie</option>
     </select>
 
-<br><br><br>    
-            <!-- Grille des projets -->
-                   <div id="projectsGrid" class="grid">
+    <br><br><br>    
+    <!-- Grille des projets -->
+    <div id="projectsGrid" class="grid">
 
-<a href="site.html" class="project" data-tags="Web" role="button" tabindex="0"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-
-        <h3>Création de ce site</h3>
-        <p>Premier projet web 🌐</p>
-
+      <a href="{{ '/posts/site.html' | relative_url }}" class="project" data-tags="Web" role="button" tabindex="0"
+          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+          <h3>Création de ce site</h3>
+          <p>Premier projet web 🌐</p>
       </a>
 
-                <a href="accessibilite.html" class="project" data-tags="Web Handicap" role="button" tabindex="0"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-
-        <h3>Accessibilité du site</h3>
-        <p>Projet web basé sur le RGAA ♿️</p>
-
+      <a href="{{ '/posts/accessibilite.html' | relative_url }}" class="project" data-tags="Web Handicap" role="button" tabindex="0"
+          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+          <h3>Accessibilité du site</h3>
+          <p>Projet web basé sur le RGAA ♿️</p>
       </a>
 
-<a href="jishotoanki.html" class="project" data-tags="Web" role="button" tabindex="0"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-
-        <h3>Jisho to Anki</h3>
-        <p>Une extension Firefox de dictionnaire 🇯🇵</p>
-
+      <a href="{{ '/posts/jishotoanki.html' | relative_url }}" class="project" data-tags="Web" role="button" tabindex="0"
+          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+          <h3>Jisho to Anki</h3>
+          <p>Une extension Firefox de dictionnaire 🇯🇵</p>
       </a>
 
-                <a href="renneslogements.html" class="project" data-tags="Data" role="button" tabindex="0"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-
-        <h3>Étude statistique 📊</h3>
-        <p>Dynamique logements-population à Rennes</p>
-
+      <a href="{{ '/posts/renneslogements.html' | relative_url }}" class="project" data-tags="Data" role="button" tabindex="0"
+          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+          <h3>Étude statistique 📊</h3>
+          <p>Dynamique logements-population à Rennes</p>
       </a>
 
+      <a href="{{ '/posts/anomaliesdepensescommunes.html' | relative_url }}" class="project" data-tags="Data" role="button" tabindex="0"
+          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+          <h3>Data Mining 🗂️ ⚒️</h3>
+          <p>Détection d'anomalies comptables des communes</p>
       </a>
 
-                <a href="anomaliesdepensescommunes.html" class="project" data-tags="Data" role="button" tabindex="0"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-
-        <h3>Data Mining 🗂️ ⚒️</h3>
-        <p>Détection d'anomalies comptables des communes</p>
-
-      </a>
-
-
-
-            </div>
+    </div>
 
     <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
       <br><br>
-  Projets à venir... ⏳
-  <br><br><br><br>
-  </div>
-   
-            
+      Projets à venir... ⏳
+      <br><br><br><br>
+    </div>
+
     <br><br><br>
-  </section>
-
-    
-    
-    
-
-
-
+</section>

@@ -126,7 +126,7 @@
 
 
   <main>
-      <section id="article" class="section article">
+    <section id="article" class="section article">
 
     <h2>Jisho to Anki</h2>
     <h3>Prototype d'une extension firefox de dictionnaire reliée à Anki</h3>
@@ -134,34 +134,36 @@
 Langages utilisés :  <br>
 
 <section id="lang" class="section lang">
-<img src="htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
-<img src="js.svg"  alt="Logo Javascript"  id="jslogo">
+  <img src="/assets/img/htmlcss.svg" alt="Logo HTML CSS" id="htmlcsslogo">
+  <img src="/assets/img/js.svg" alt="Logo Javascript" id="jslogo">
 </section>
- <br>
-<p> L'extension en cours de création est disponible sur <a href="https://github.com/salomerabec/jishotoanki" role="button"  tabindex="0">mon GitHub</a>. </p>
 
-    <p>J'ai voulu créer une extension firefox dont le but est d'afficher la définition d'un mot japonais lorsqu'on le surligne sur une page web, et de pouvoir 
-      créer une fiche de révision de ce mot qui est directement envoyée dans le logiciel d'apprentissage Anki.</p>
-      <p>J'ai choisi d'utiliser le dictionnaire anglais-japonais <a href="https://jisho.org" role="button"  tabindex="0">Jisho.org</a>.</p>
-      <p>Pour cela, j'ai utilisé l'API du site jisho.org, ainsi que le service AnkiConnect qui reçoit la carte créée. J'ai réglé le popup pour qu'il s'ouvre lorsque 
-        je surligne et survole un mot,
-        et pour qu'il se ferme lorsque la souris quitte le mot. </p><p>Il y a une page de réglages qui permet d'entrer le nom du paquet de carte dans lequel on veut
-         envoyer les nouvelles cartes, ainsi que le type de carte, et tout ceci est enregistré dans une page options.js. </p><p>Il y a aussi un système qui permet de 
-         détecter si une carte existe déjà pour le signaler à l'utilisateur.
-      </p>
-      <p>Après quelques heures j'ai fini par obtenir ce squelette fonctionnel :</p>
+<br>
+<p>L'extension en cours de création est disponible sur <a href="https://github.com/salomerabec/jishotoanki" role="button" tabindex="0">mon GitHub</a>.</p>
 
+<p>J'ai voulu créer une extension firefox dont le but est d'afficher la définition d'un mot japonais lorsqu'on le surligne sur une page web, et de pouvoir créer une fiche de révision de ce mot qui est directement envoyée dans le logiciel d'apprentissage Anki.</p>
+
+<p>J'ai choisi d'utiliser le dictionnaire anglais-japonais <a href="https://jisho.org" role="button" tabindex="0">Jisho.org</a>.</p>
+
+<p>Pour cela, j'ai utilisé l'API du site jisho.org, ainsi que le service AnkiConnect qui reçoit la carte créée. J'ai réglé le popup pour qu'il s'ouvre lorsque je surligne et survole un mot, et pour qu'il se ferme lorsque la souris quitte le mot.</p>
+
+<p>Il y a une page de réglages qui permet d'entrer le nom du paquet de carte dans lequel on veut envoyer les nouvelles cartes, ainsi que le type de carte, et tout ceci est enregistré dans une page options.js.</p>
+
+<p>Il y a aussi un système qui permet de détecter si une carte existe déjà pour le signaler à l'utilisateur.</p>
+
+<p>Après quelques heures j'ai fini par obtenir ce squelette fonctionnel :</p>
 
 <div class="photos">
-  <img src="./jishotoanki/1.png" alt="Capture d'écran du rendu en surlignant un mot"  onclick="openLightbox(this)">
-  <img src="./jishotoanki/2.png" alt="Capture d'écran des paramètres de l'extension dans l'onglet about:addons"  onclick="openLightbox(this)">
+  <img src="/assets/img/posts/jishotoanki/1.png" alt="Capture d'écran du rendu en surlignant un mot" onclick="openLightbox(this)">
+  <img src="/assets/img/posts/jishotoanki/2.png" alt="Capture d'écran des paramètres de l'extension dans l'onglet about:addons" onclick="openLightbox(this)">
 </div>
- <br><br>
 
-<p>Le résultat me satisfait pour un usage personnel, mais voici les points à revoir pour une extension publiable :
-  <ul>
+<br><br>
+
+<p>Le résultat me satisfait pour un usage personnel, mais voici les points à revoir pour une extension publiable :</p>
+<ul>
   <li>Avoir un paramètre de langue pour pouvoir changer entre français et anglais, et ne pas avoir les deux langues mélangées</li>
-  <li>Faire en sorte que la création de carte Anki soit possible même sans avor Anki ouvert sur son PC</li>
+  <li>Faire en sorte que la création de carte Anki soit possible même sans avoir Anki ouvert sur son PC</li>
   <li>Ajouter les phrases d'exemple</li>
   <li>Avoir un onglet particulier pour les idéogrammes, leurs prononciations et leur tracé</li>
   <li>Ajouter les différentes écritures de chaque mot</li>
@@ -169,19 +171,15 @@ Langages utilisés :  <br>
   <li>Ajouter un deuxième dictionnaire qui traduit de l'anglais au français, pour avoir une version 100% française</li>
   <li>Avoir une fenêtre plus jolie</li>
 </ul>
-</p>
 
-
-<p>Exemple pour tester l'extension : 色は匂へど
-散りぬるを
-我が世誰ぞ
+<p>Exemple pour tester l'extension :<br>
+色は匂へど<br>
+散りぬるを<br>
+我が世誰ぞ<br>
 常ならむ
 </p>
 
-
-
-  </section>
-
+</section>
 
 
 <!-- Fenêtre Lightbox cachée au départ -->
@@ -203,7 +201,6 @@ Langages utilisés :  <br>
   >
   <img id="lightbox-img" src="" alt="" />
 </div>
-
 
 
   </main>

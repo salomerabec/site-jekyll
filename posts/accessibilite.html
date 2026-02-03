@@ -5,7 +5,6 @@ css: /assets/css/index.css
 js: /assets/js/index.js
 ---
 
-
 <section id="article" class="section article">
 
     <h2>Accessibilité numérique du site</h2>
@@ -13,10 +12,9 @@ js: /assets/js/index.js
 Langages utilisés :  <br>
 
 <section id="lang" class="section lang">
-<img src="htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
-<img src="js.svg"  alt="Logo Javascript"  id="jslogo">
+  <img src="{{ '/assets/img/htmlcss.svg' | relative_url }}"  alt="Logo HTML CSS"  id="htmlcsslogo">
+  <img src="{{ '/assets/img/js.svg' | relative_url }}"  alt="Logo Javascript"  id="jslogo">
 </section>
-
 
 <br><br><br>
 <p>Une des missions du service public est de rendre ses productions accessibles à tous. <br>
@@ -43,7 +41,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <br>
 
 <div class="altertext">
-  <img src="./accessibilite/alt.png" alt="Capture d'écran du code HTML de ma page Pâtisserie"  onclick="openLightbox(this)">
+  <img src="{{ '/assets/img/posts/accessibilite/alt.png' | relative_url }}" alt="Capture d'écran du code HTML de ma page Pâtisserie"  onclick="openLightbox(this)">
 </div>
 <br>
 <br>
@@ -54,7 +52,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <p>Le plus long et difficile a été de faire en sorte que le menu déroulant soit à la fois accessible par clic en s'affichant en cas de survol, et par utilisation du focus : </p>
 <br>
 <div class="focus">
-  <img src="./accessibilite/focus.png" alt="Capture d'écran du menu avec le focus"  onclick="openLightbox(this)">
+  <img src="{{ '/assets/img/posts/accessibilite/focus.png' | relative_url }}" alt="Capture d'écran du menu avec le focus"  onclick="openLightbox(this)">
 </div>
 
 <br>
@@ -66,7 +64,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <br>
 
 <div class="contraste">
-  <img src="./accessibilite/contraste.png" alt="Capture d'écran de l'outil Lighthouse appliqué à ma page d'accueil"  onclick="openLightbox(this)">
+  <img src="{{ '/assets/img/posts/accessibilite/contraste.png' | relative_url }}" alt="Capture d'écran de l'outil Lighthouse appliqué à ma page d'accueil"  onclick="openLightbox(this)">
 </div>
 <br>
 <br>
@@ -78,22 +76,20 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 
 <br>
 <div class="aria">
-  <img src="./accessibilite/aria.png" alt="Liste des éléments ARIA existant"  onclick="openLightbox(this)">
+  <img src="{{ '/assets/img/posts/accessibilite/aria.png' | relative_url }}" alt="Liste des éléments ARIA existant"  onclick="openLightbox(this)">
 </div>
 
 <br><br><br>
 <p>Au final, en appliquant ces 5 points principaux et en prenant le réflexe de les utiliser dans chaque projet, j'espère pouvoir rendre mes sites et programmes plus accueillants pour tous. C'est à la fois une chose qui me tient à coeur personnellement, une exigence dans le service public et un gage de qualité. ✨</p>
 <br><br>
 <div class="fin">
-  <img src="./accessibilite/fin.png" alt="Image de Lighthouse avec Google Chrome dans l'onglet Accessibilité"  onclick="openLightbox(this)">
+  <img src="{{ '/assets/img/posts/accessibilite/fin.png' | relative_url }}" alt="Image de Lighthouse avec Google Chrome dans l'onglet Accessibilité"  onclick="openLightbox(this)">
 </div>
 
 <div class="date">
   Rédigé le 29 octobre 2025
 </div>
 
-
 </section>
-
 
 {% include lightbox.html %}

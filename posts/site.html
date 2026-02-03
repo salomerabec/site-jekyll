@@ -5,177 +5,104 @@ css: /assets/css/index.css
 js: /assets/js/index.js
 ---
 
-
-  <section id="article" class="section article">
+<section id="article" class="section article">
 <h1>Création de ce site web</h1>
 <br>
 
 Langages utilisés :  <br>
 
 <section id="lang" class="section lang">
-<img src="htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
-<img src="js.svg"  alt="Logo Javascript"  id="jslogo">
-<img src="python.svg"  alt="Logo Python"  id="pythonlogo">
+  <img src="{{ '/assets/img/htmlcss.svg' | relative_url }}" alt="Logo HTML CSS" id="htmlcsslogo">
+  <img src="{{ '/assets/img/js.svg' | relative_url }}" alt="Logo Javascript" id="jslogo">
+  <img src="{{ '/assets/img/python.svg' | relative_url }}" alt="Logo Python" id="pythonlogo">
 </section>
- <br>
-
 <br>
+
 <p>J'ai souhaité documenter la création de ce site personnel pour y lister tout ce que j'ai appris durant ce processus. </p>
-  <p>J'en ai commencé l'élaboration lorsque 
-  j'étais en M1 de Cryptographie et que j'apprenais plusieurs langages, je souhaitais créer une base qui pourrait plus tard devenir mon port-folio. J'ai donc décidé 
+<p>J'en ai commencé l'élaboration lorsque j'étais en M1 de Cryptographie et que j'apprenais plusieurs langages, je souhaitais créer une base qui pourrait plus tard devenir mon port-folio. J'ai donc décidé 
 d'apprendre le HTML et CSS à partir de zéro, et de reprendre le javascript en utilisant l'aide de l'IA pour comprendre comment cela fonctionne et comment réparer les erreurs.</p>
 <br>
+
 <h2>Les points qui m'ont donné du fil à retordre</h2>
 <br>
 
-
 <h3>📌 Le mode nuit</h3>
-
-<p>En créant le mode nuit j'ai très vite eu un problème : le "flash". Lorsque le mode nuit est activé, il est censé rester même en navigant de page en page, et s'afficher 
-  directement sans que la page s'affiche d'abord en blanc pendant une demie-seconde. </p>
-  <p>J'ai mis un moment à créer le fichier Javascript qui crée un style temporaire
-  au chargement, puis qui le remplace par le style définitif ensuite, et ceci sans faire apparaître ce "flash".
-</p>
+<p>En créant le mode nuit j'ai très vite eu un problème : le "flash". Lorsque le mode nuit est activé, il est censé rester même en navigant de page en page, et s'afficher directement sans que la page s'affiche d'abord en blanc pendant une demie-seconde. </p>
+<p>J'ai mis un moment à créer le fichier Javascript qui crée un style temporaire au chargement, puis qui le remplace par le style définitif ensuite, et ceci sans faire apparaître ce "flash".</p>
 
 <div class="gimp">
-  <img src="./site/nuitjs.png" alt="Capture d'écran du code JS pour le mode nuit"  onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <img src="{{ '/assets/img/posts/site/nuitjs.png' | relative_url }}" alt="Capture d'écran du code JS pour le mode nuit" onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 </div>
 <br>
 
 <h3>📌 L'accessibilité via le focus</h3>
-
-<p>J'ai mis de longues heures à faire en sorte que le focus puisse accéder à toutes les catégories du menu, y compris celles dans les menus déroulants (dropdown). J'ai dû ajouter
-  des "button" un peu partout. Je pense que faire en sorte de construire le menu en ayant dès le début conscience que le focus doit être utilisable permet de ne 
-  pas faire fausse route trop longtemps, en n'ajoutant pas d'éléments qui vont être incompatibles.
-</p>
-
+<p>J'ai mis de longues heures à faire en sorte que le focus puisse accéder à toutes les catégories du menu, y compris celles dans les menus déroulants (dropdown). J'ai dû ajouter des "button" un peu partout. Je pense que faire en sorte de construire le menu en ayant dès le début conscience que le focus doit être utilisable permet de ne pas faire fausse route trop longtemps, en n'ajoutant pas d'éléments qui vont être incompatibles.</p>
 
 <h3>📌 La création des images</h3>
-
-
-
 <div class="gimp">
-  <img src="./site/gimp.png" alt="Capture d'écran de l'image de page d'accueil sur GIMP"  onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <img src="{{ '/assets/img/posts/site/gimp.png' | relative_url }}" alt="Capture d'écran de l'image de page d'accueil sur GIMP" onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 </div>
 <br>
-<p>Pour illustrer mon site j'ai utilisé à plusieurs reprise l'IA de génération d'image de OpenAI. J'ai choisi une image exemple à montrer à l'IA pour lui montrer 
-  dans quel angle je voulais que l'image soit dessinée, quelles couleurs utiliser, j'ai ajouté au prompt des détails que je voulais absolument. </p>
-  <p>J'ai ensuite utilisé le logiciel GIMP pour retoucher l'image, supprimer le fond pour mettre un fond transparent, changer quelques couleurs, et faire des bords bien clairs pour que le dessin
-  soit esthétique même sur fond noir (mode nuit).
-</p>
+<p>Pour illustrer mon site j'ai utilisé à plusieurs reprise l'IA de génération d'image de OpenAI. J'ai choisi une image exemple à montrer à l'IA pour lui montrer dans quel angle je voulais que l'image soit dessinée, quelles couleurs utiliser, j'ai ajouté au prompt des détails que je voulais absolument. </p>
+<p>J'ai ensuite utilisé le logiciel GIMP pour retoucher l'image, supprimer le fond pour mettre un fond transparent, changer quelques couleurs, et faire des bords bien clairs pour que le dessin soit esthétique même sur fond noir (mode nuit).</p>
 
-
-<p>Pour le GIF de fond qui représente des lignes de binaires qui "tombent", j'ai créé un code Python qui crée directement une image GIF pour laquelle on peut
-  changer les paramètres comme on veut.
-</p>
+<p>Pour le GIF de fond qui représente des lignes de binaires qui "tombent", j'ai créé un code Python qui crée directement une image GIF pour laquelle on peut changer les paramètres comme on veut.</p>
 
 <div class="bin">
-  <img src="./site/bin.png" alt="Capture d'écran de mon code Python"  onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <img src="{{ '/assets/img/posts/site/bin.png' | relative_url }}" alt="Capture d'écran du code Python" onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 </div>
 <br>
 
 <h3>📌 Le formulaire de contact</h3>
-
-<p>Pour le formulaire de contact, je me suis rendue compte que j'avais besoin d'utiliser un service tiers car pour l'instant mon site est statique et 
-  hébergé sur GitHub Pages. 
-</p>
-<p>J'ai choisi d'utiliser le service EmailJS. À long terme, étant dans une optique d'utiliser uniquement des logiciels libres et sans copyright, il faudrait que j'apprenne
-  PHP ou un autre langage pour créer un site dynamique.
-</p>
-
+<p>Pour le formulaire de contact, je me suis rendue compte que j'avais besoin d'utiliser un service tiers car pour l'instant mon site est statique et hébergé sur GitHub Pages. </p>
+<p>J'ai choisi d'utiliser le service EmailJS. À long terme, étant dans une optique d'utiliser uniquement des logiciels libres et sans copyright, il faudrait que j'apprenne PHP ou un autre langage pour créer un site dynamique.</p>
 
 <h3>📌 L'animation "Machine à écrire"</h3>
+<p>Pour la description de ma page d'accueil j'ai choisi d'utiliser une animation classique : "typewriter". Je voulais à la fois que mon texte s'affiche ligne par ligne, tout de suite à son emplacement définitif, avec un curseur clignotant, et surtout avec une lettrine et une indentation croissante à chaque ligne.</p>
+<p>J'ai mis plusieurs heures à réussir à coder tous ces paramètres sans que les uns annulent les autres, en supprimant des &lt;span&gt; et en jouant sur les sections. Grâce à un code JS appelé au bon moment j'ai fini par y arriver.</p>
 
-<p>Pour la description de ma page d'accueil j'ai choisi d'utiliser une animation classique : "typewriter". Je voulais à la fois que mon texte s'affiche ligne 
-  par ligne, tout de suite à son emplacement définitif, avec un curseur clignotant, et surtout avec une lettrine et une indentation croissante à chaque ligne.
-</p>
-
-<p>J'ai mis plusieurs heures à réussir à coder tous ces paramètres sans que les uns annulent les autres, en supprimant des &lt;span&gt; et en jouant sur les sections. Grâce à un code JS appelé au bon moment j'ai fini par y arriver.
-</p>
-
-
-
-
-  <section id="exemple" class="section exemple typewriter">
-    <p>“Bonjour, je m’appelle Salomé.</p>
+<section id="exemple" class="section exemple typewriter">
+  <p>“Bonjour, je m’appelle Salomé.</p>
 </section>
-<br>
-<br>
-
-
+<br><br>
 
 <h3>📌 L'affichage des images</h3>
+<p>Pour ma page d'accueil, j'ai voulu utiliser des badges du <a href="https://openbadgepassport.com/" role="button" tabindex="0">site Open Badge Passport</a> pour présenter mes compétences. Malheureusement, en utilisant les liens iframe donnés sur le site, j'ai été confrontée au fait que les images mettaient de longues secondes à charger. </p>
+<p>Cela a aussi été le cas pour mes photos de la section "Passions". J'ai donc dû afficher d'abord des images locales et en moindre qualité, puis les remplacer par les vraies iframe et photos une fois qu'elles étaient chargées, sans que le changement ne soit visible.</p>
 
-<p>Pour ma page d'accueil, j'ai voulu utilisé des badges du <a href="https://openbadgepassport.com/" role="button"  tabindex="0">site Open Badge Passport</a> pour présenter mes compétences. Malheureusement, en utilisant les liens iframe donnés sur le site, j'ai été confrontée au 
-  fait que les images mettaient de longues secondes à charger. </p>
-  <p>Cela a aussi été le cas pour mes photos de la section "Passions". J'ai donc dû afficher d'abord des
-  images locales et en moindre qualité, puis les remplacer par les vraies iframe et photos une fois qu'elles étaient chargées, sans que le changement ne soit visible.
-</p>
-
-
-  <section class="connaissances">
-    <div class="grid-connaissances">
-
-      <figure>
-        <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1018951/pic/embed"
-          width="300" height="405" title="Lien : Badge de Licence de Mathématiques"></iframe>
-      </figure>
-
-      <figure>
-        <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1029165/pic/embed"
-          width="200" height="270" title="Lien : Badge de Licence d'Administration Publique"></iframe>
-      </figure>
-
-
-      <figure>
-        <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1018997/pic/embed"
-          width="300" height="405" title="Lien : Badge de bachelière scientifique"></iframe>
-      </figure>
-
-
-
-    </div>
-  </section>
-<br>
-<br>
+<section class="connaissances">
+  <div class="grid-connaissances">
+    <figure>
+      <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1018951/pic/embed" width="300" height="405" title="Lien : Badge de Licence de Mathématiques"></iframe>
+    </figure>
+    <figure>
+      <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1029165/pic/embed" width="200" height="270" title="Lien : Badge de Licence d'Administration Publique"></iframe>
+    </figure>
+    <figure>
+      <iframe frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/1018997/pic/embed" width="300" height="405" title="Lien : Badge de bachelière scientifique"></iframe>
+    </figure>
+  </div>
+</section>
+<br><br>
 
 <h3>📌 L'affichage sur téléphone</h3>
-
-
-<p>J'ai commencé par définir les tailles et emplacements des éléments en utilisant des nombres de pixels : mais une fois que la taille de la fenêtre change, tout est
-  à refaire. J'ai donc principalement utilisé les vh et vw pour être sûre que la taille des éléments soit adaptée à la taille de la fenêtre, peu importe sa forme. J'ai aussi testé le site avec tous les navigateurs et toutes les tailles de fenêtres possible, ainsi que sur plusieurs téléphones.</p>
-  
-  <p>J'ai utilisé flex-wrap et @media dans mon CSS pour changer la façon dont les éléments s'alignent (de horizontalement à verticalement) pour lorsque l'utilisateur est sur téléphone.
-</p>
+<p>J'ai commencé par définir les tailles et emplacements des éléments en utilisant des nombres de pixels : mais une fois que la taille de la fenêtre change, tout est à refaire. J'ai donc principalement utilisé les vh et vw pour être sûre que la taille des éléments soit adaptée à la taille de la fenêtre, peu importe sa forme. J'ai aussi testé le site avec tous les navigateurs et toutes les tailles de fenêtres possible, ainsi que sur plusieurs téléphones.</p>
+<p>J'ai utilisé flex-wrap et @media dans mon CSS pour changer la façon dont les éléments s'alignent (de horizontalement à verticalement) pour lorsque l'utilisateur est sur téléphone.</p>
 <br>
+
 <h3>📌 L'harmonisation des pages du site et du code</h3>
-
-<p>Au tout début j'ai commencé par créer ma page d'accueil, puis une deuxième page, et très vite je me suis retrouvée avec plein de pages mais qui avaient toutes des micro-différences dans leur apparence : 
-  le menu ne se comportait pas pareil au survol, la taille des footers n'était pas identique,...
-</p>
-<p>J'ai très vite compris un principe basique mais capital : l'importance de séparer le HTML, CSS et Javascript dans des fichiers différents. De cette
-façon, j'ai pu utiliser le même fichier CSS ou JS pour toutes les pages et ainsi gagner en harmonie, en temps et en nombre de lignes de code.
-</p>
-<p>Pour finir de "nettoyer" mon code, j'ai repris tous mes fichiers créés et pris le temps de supprimer toutes les lignes qui étaient redondantes, celles
-  qui codaient un élément que j'ai décidé de supprimer, j'ai tout remis dans un ordre cohérent avec des commentaires.
-</p>
-
+<p>Au tout début j'ai commencé par créer ma page d'accueil, puis une deuxième page, et très vite je me suis retrouvée avec plein de pages mais qui avaient toutes des micro-différences dans leur apparence : le menu ne se comportait pas pareil au survol, la taille des footers n'était pas identique,...</p>
+<p>J'ai très vite compris un principe basique mais capital : l'importance de séparer le HTML, CSS et Javascript dans des fichiers différents. De cette façon, j'ai pu utiliser le même fichier CSS ou JS pour toutes les pages et ainsi gagner en harmonie, en temps et en nombre de lignes de code.</p>
+<p>Pour finir de "nettoyer" mon code, j'ai repris tous mes fichiers créés et pris le temps de supprimer toutes les lignes qui étaient redondantes, celles qui codaient un élément que j'ai décidé de supprimer, j'ai tout remis dans un ordre cohérent avec des commentaires.</p>
 
 <h2>Ce que je ferais différemment</h2>
+<p>Si c'était à refaire, ayant maintenant de l'expérience, je commencerais dès le début à organiser mon code et à le penser pour pouvoir réutiliser les fichiers CSS et JS, en optimisant le nombre de lignes de code au maximum. Je coderais tout en ayant dès le début à l'esprit que cela doit rester esthétique peu importe la taille ou le ratio de la fenêtre.</p>
+<p>Je me renseignerais sur l'hébergement, les sites dynamiques, les langages AVANT de commencer à imaginer le site, pour commencer dès le début avec une bonne architecture.</p>
 
-<p>Si c'était à refaire, ayant maintenant de l'expérience, je commencerais dès le début à organiser mon code et à le penser pour pouvoir réutiliser les fichiers CSS
-  et JS, en optimisant le nombre de lignes de code au maximum. Je coderais tout en ayant dès le début à l'esprit que cela doit rester esthétique peu importe la taille ou le ratio de la fenêtre.</p>
-  
-  <p>Je me renseignerais sur l'hébergement, les sites dynamiques, les langages AVANT de commencer à imaginer le site, pour commencer dès le début avec une bonne architecture.
- </p>
-
-   <section class="date">
+<section class="date">
 Rédigé le 14 novembre 2025
-   </section>
+</section>
 
-
-  </section>
-
+</section>
 
 {% include lightbox.html %}
-
