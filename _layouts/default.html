@@ -12,20 +12,21 @@
 
   <!-- CSS global -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/article.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
 
-  <!-- CSS spécifique à la page (optionnel) -->
-  {% if page.css %}
-  <link rel="stylesheet" href="{{ page.css | relative_url }}">
-  {% endif %}
 
   <!-- JS global -->
   <script src="{{ '/assets/js/nuit.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/lazyload.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/navtel.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/recherche.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
 
-  <!-- JS spécifique à la page (optionnel) -->
-  {% if page.js %}
-  <script src="{{ page.js | relative_url }}" defer></script>
-  {% endif %}
 
   <!-- Favicons -->
   <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon">

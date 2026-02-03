@@ -1,0 +1,105 @@
+/* === Carousel principal === */
+.carousel {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* === Conteneur des slides === */
+.slides {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+/* === Chaque slide === */
+.slide {
+  min-width: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1; 
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.slide img {
+  width: 80%;          /* réduit l'image */
+  margin: 0 auto;      /* centre horizontalement */
+  display: block;      /* supprime l'espace sous l'image */
+  padding: 20px 0; 
+  object-fit: contain; /* garde la proportion sans couper */
+}
+
+/* === Boutons précédent / suivant === */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev { left: -10px; }
+.next { right: -10px; }
+
+/* === Conteneur des miniatures === */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;       /* scroll horizontal si trop de miniatures */
+  overflow-y: hidden;     
+  white-space: nowrap;     
+  padding-bottom: 10px;
+  scroll-snap-type: x proximity; /* scroll fluide */
+  align-items: center;
+}
+
+/* === Boutons miniatures === */
+.thumbnails .thumb {
+  display: inline-block;   /* important pour width/height */
+  width: auto;
+  height: 100px;
+  padding: 0;
+  margin: 0 5px;
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  
+  
+}
+
+/* === Image à l'intérieur du bouton === */
+.thumbnails .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* supprime l'espace blanc sous img */
+  
+  
+}
+
+/* === État actif === */
+.thumbnails .thumb.active {
+  border: 2px solid #333;
+}
+
+/* === Focus visible === */
+.carousel button:focus,
+.thumbnails .thumb:focus {
+  outline: 4px solid #7ece59;
+  outline-offset: 4px;
+}
