@@ -1,0 +1,99 @@
+---
+layout: default  
+title: Jardinage
+css: /assets/css/index.css
+js: /assets/js/index.js
+---
+<section class="article">
+  <div class="article.section">
+    <h2>Jardinage</h2>
+    <p>
+      Je jardine depuis des années, j'aime aménager mon jardin pour qu'il
+      soit autonome avec le moins d'entretien possible, et j'aime multiplier
+      mes plantes pour les donner à mes proches. 🐞🌱🌻 <br />
+    </p>
+    <p>
+      Le plus important c'est de tout planifier de façon optimale, puis
+      d'être patient et régulier ⏳ <br /><br />
+    </p>
+  </div>
+
+  <div class="photos">
+    <img
+      src="{{ '/assets/img/jardin/1.jpg' | relative_url }}"
+      alt="Photo d'une citrouille"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/7.jpg' | relative_url }}"
+      alt="Photo d'un chou dans un rayon de soleil"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/3.jpg' | relative_url }}"
+      alt="Photo d'une abeille qui butine un cassissier en fleurs"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/4.jpg' | relative_url }}"
+      alt="Photo de fraisiers"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/6.jpg' | relative_url }}"
+      alt="Photo d'une aubergine rayée"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/5.jpg' | relative_url }}"
+      alt="Photo de plans de pommes de terre en rangs"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/8.jpg' | relative_url }}"
+      alt="Photo de chrysomèles sur du romarin"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/9.jpg' | relative_url }}"
+      alt="Photo de framboises en train de mûrir"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+    <img
+      src="{{ '/assets/img/jardin/10.jpg' | relative_url }}"
+      alt="Photo d'une courge encore verte"
+      onclick="openLightbox(this)"
+      role="button"
+      tabindex="0"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
+    />
+
+    <br /><br />
+  </div>
+</section>
+
+{% include lightbox.html %}

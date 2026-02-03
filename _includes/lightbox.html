@@ -1,0 +1,20 @@
+
+<!-- Fenêtre Lightbox cachée au départ -->
+<div
+  id="lightbox"
+  class="lightbox"
+  onclick="closeLightbox()"
+  onkeydown="if(event.key === 'Enter' || event.key === ' ') closeLightbox()"
+  tabindex="0"
+  role="dialog"
+  aria-modal="true"
+>
+  <span
+    class="close"
+    tabindex="0"
+    role="button"
+    aria-label="Fermer la lightbox"
+    >&times;</span
+  >
+  <img id="lightbox-img" src="" alt="" />
+</div>
