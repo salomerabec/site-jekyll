@@ -1,0 +1,272 @@
+/*SECTION PROFIL*/
+
+.profil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  height: 95vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+
+.profil-text {
+  text-align: left;
+  margin-right: 0.5vw;
+  padding-right: 10vh;
+}
+
+h1 {
+  font-size: 4vh;
+}
+.profil h2 {
+  font-size: 3vh;
+}
+
+.profil.nuit {
+  background-color: #000d2b;
+  color: white;
+}
+
+/*IMAGES*/
+
+#bin {
+  z-index: 1;
+  width: 40vw;
+  height: 80vh;
+  border-radius: 10px;
+  top: 0;
+  right: 10vw;
+  position: absolute;
+}
+#profil-img {
+  z-index: 2;
+  width: 50vw;
+  height: auto;
+  border-radius: 1vw;
+  right: 8vw;
+  opacity: 0;
+  animation: slideDown 1s ease-out forwards;
+}
+
+/*affichage téléphone*/
+
+@media (max-width: 768px) {
+  #profil {
+    flex-direction: column; /* image passe sous le texte */
+    text-align: center;
+  }
+
+  #profil-img {
+    order: 2; /* force l’image à venir APRÈS le texte */
+    width: 80vw;
+    margin-top: 20px;
+  }
+
+  .profil-text {
+    order: 1; /* le texte vient en premier */
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #9ed697;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cv-button:hover {
+  background-color: #5f815a;
+}
+
+.cv-button.nuit {
+  background-color: #273672;
+  color: white;
+}
+.cv-button.nuit:hover {
+  background-color: #6171bb;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  height: 70vh;
+  justify-content: flex-start;
+  padding-left: 4vw;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+@media (max-width: 1600px) {
+  .description {
+    white-space: normal; /* le texte revient à la ligne sur mobile */
+  }
+}
+
+.description p {
+  text-align: left;
+  font-size: 2.4vh;
+  font-style: italic;
+  margin-bottom: 10vh;
+}
+
+/*Lettrine*/
+.description p:first-child::first-letter {
+  font-size: 6vh;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+.exemple p:first-child::first-letter {
+  font-size: 6vh;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+.exemple p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.typewriter p:nth-child(1) {
+  margin-left: 1rem;
+}
+.typewriter p:nth-child(2) {
+  margin-left: 4rem;
+}
+.typewriter p:nth-child(3) {
+  margin-left: 8rem;
+}
+.typewriter p:nth-child(4) {
+  margin-left: 12rem;
+}
+
+.valeurs {
+  font-style: normal;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  font-size: 2vh;
+}
+
+/*SECTION CONNAISSANCES AVEC LES BADGES*/
+
+.connaissances {
+  padding-left: 2vw;
+}
+
+section.connaissances h2 {
+  text-align: left;
+  margin-left: 2vw;
+  font-size: 1.5em;
+  margin-bottom: 60px;
+  margin-top: 100px;
+}
+
+
+
+
+
+/* Supprime le margin par défaut des iframes */
+.grid-connaissances iframe,
+.grid-connaissances2 iframe {
+  margin-left: 0px;
+  padding-left: 0px;
+  max-height: 150px;
+  width: 180px;
+  object-fit: contain; /* ajuste l'image sans la déformer */
+  border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+
+
+.grid-connaissances,
+.grid-connaissances2 {
+  display: flex;
+  text-align: start;
+  grid-template-columns: repeat(auto-fit, minmax(10px, auto));
+  flex-wrap: wrap;
+  gap: 0px; /* espace entre les badges */
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.grid-connaissances figure,
+.grid-connaissances2 figure {
+  text-align: center;
+  flex-direction: column;
+  display: inline-block; /* les figures restent à la suite les unes des autres */
+  vertical-align: top;
+}
+
+.grid-connaissances figcaption,
+.grid-connaissances2 figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
+
+/*CURSEUR */
+
+.typewriter {
+  width: 100%; /* occupe tout l’espace disponible */
+  overflow-wrap: break-word; /* coupe les mots trop longs */
+  word-wrap: break-word; /* compatibilité avec anciens navigateurs */
+  box-sizing: border-box; /* inclut le padding dans la largeur */
+  white-space: normal; /* permet le retour à la ligne automatique */
+  line-height: 1.4;
+}
+
+.typewriter p {
+  margin: 0;
+  font-size: 2.5vh;
+  visibility: hidden; /* caché au départ */
+}
+
+.cursor {
+  display: inline;
+  width: 5px !important;
+  height: 2rem !important;
+  margin-left: 3px;
+  animation: blink 0.7s steps(1) infinite;
+  visibility: visible !important;
+  background-color: var(--cursor-bg);
+  outline: 2px solid var(--cursor-outline);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+:root {
+  --cursor-bg: white;
+  --cursor-outline: black;
+}
+
+html.nuit,
+body.nuit {
+  --cursor-bg: black;
+  --cursor-outline: white;
+}

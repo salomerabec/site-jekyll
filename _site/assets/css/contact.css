@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh; /* occupe au moins toute la fenêtre */
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15vh;
+  left: 50vw;
+  right: 0vw;
+  margin-right: 0px;
+  transform: translateX(-10%);
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    gap: 60px 20px; /* 40px vertical, 20px horizontal */
+  }
+}
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2vh;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  flex-wrap: wrap;
+  flex: 1 1 400px; /* prend au moins 400px, mais peut s’adapter */
+  max-width: 600px;
+}
+
+.contact-form.nuit {
+  background-color: #00093f;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  /*box-shadow: 0 0 10px white;*/
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: clamp(20px, 5vw, 30px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  height: 10%;
+  resize: vertical;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #9ed697;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group button:hover {
+  background-color: #56ac5a;
+}
+
+.form-group button.nuit {
+  background-color: #273672;
+  color: white;
+}
+.form-group button.nuit:hover {
+  background-color: #6171bb;
+}
+
+.contact-form {
+  width: 40%;
+}
+
+.additional-content {
+  position: relative; /* pour positionner le logo à l’intérieur */
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 20px 20px 60px; /* espace à gauche pour le logo */
+  background-color: #fff;
+  border-radius: 5px;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center; /* centre le texte */
+  word-wrap: break-word; /* force les retours à la ligne */
+  margin: 0 auto; /* centre le bloc sur la page */
+}
+
+/* Le logo positionné à gauche, à l’intérieur du cadre */
+#location {
+  position: absolute;
+  left: 15px; /* un peu d’espace par rapport au bord du cadre */
+  top: 50%; /* position verticale centrée */
+  transform: translateY(-50%); /* aligne parfaitement au centre vertical */
+  width: 40px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.additional-content.nuit {
+  background-color: #00093f;
+  color: white;
+  background-color: #00093f;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+h3 {
+  margin-bottom: 4vh; /* Ajuste cette valeur pour avoir plus ou moins d'espace sous le titre */
+}
+
+
+
+
+
+.taille {
+  width: 250px;
+  height: 180px;
+}
