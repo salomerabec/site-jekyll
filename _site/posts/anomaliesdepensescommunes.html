@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salomé RABEC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script src="nuit.js"></script>
+  <script src="carousel.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="carousel.css">
+
+</head>
+<style>
+
+  h1 {
+    text-align: center;
+  }
+
+h4{
+  text-align: left;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3{
+  font-size:25px;
+}
+
+</style>
+
+<body>
+
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+
+  <nav>
+    <a href="index.html">Mon parcours</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" id="btn-projets" aria-haspopup="true" aria-controls="menu-projets" aria-expanded="false">
+        Projets ▾
+      </button>
+
+      <ul class="dropdown-content" id="menu-projets" hidden>
+        <li><a href="site.html">Création du site</a></li>
+        <li><a href="accessibilite.html">Accessibilité du site</a></li>
+        <li><a href="renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+        <li><a href="jishotoanki.html">Jisho to Anki</a></li>        
+        <li><a href="anomaliesdepensescommunes.html">Data mining : Détection d’anomalies dans les dépenses publiques des communes </a></li>
+        <li><a style="text-decoration: underline;" href="projet.html">Voir tout</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="btn-passions" type="button" aria-haspopup="true" aria-controls="menu-passions"
+        aria-expanded="false">
+        Passions ▾
+      </button>
+
+      <ul class="dropdown-content" id="menu-passions" hidden>
+        <li><a href="patisserie.html">Pâtisserie</a></li>
+        <li><a href="jardin.html">Jardinage</a></li>
+      </ul>
+    </div>
+    <a href="amenagements.html">Aménagements</a>
+
+    <a href="contact.html">Contacts</a>
+  </nav>
+
+
+
+
+  <section id="lune" class="section lune">
+    <button id="modeNuitButton">
+      <img src="moon.svg" alt="Bouton mode nuit" id="luneIcon">
+    </button>
+  </section>
+
+
+  <section id="article" class="section article">
+
+    <h1>Projet data mining : Détection d’anomalies dans les dépenses publiques des communes françaises</h1>
+
+<br><br>    
+Langages utilisés :  <br>
+
+<section id="lang" class="section lang">
+<img src="python.svg"  alt="Logo Python"  id="pythonlogo">
+</section>
+<br>
+<br>
+
+<p>Suite à mon stage à la DDFiP (Direction départementale des finances publiques) de Bobigny, j'ai appris l'importance du data mining dans la détection des 
+  anomalies de dépenses et de fraudes. Aujourd'hui, environ la moitié des contrôles fiscaux sont réalisés grâce à des détections algorithmiques.
+</p>
+<p>Voulant me familiariser et m'entrainer à utiliser ce type d'algorithmes, j'ai décidé d'étudier les dépenses des 34 000 communes de France et d'essayer de créer 
+  un code qui détecterait les anomalies, me facilitant le travail pour détecter des fraudes. J'ai utilisé pour cela les données du site de 
+  <a href="  https://data.ofgl.fr/explore/dataset/ofgl-base-communes/table/?disjunctive.nomen&disjunctive.agregat&disjunctive.tranche_revenu_imposable_par_habitant&disjunctive.tranche_population&disjunctive.epci_name&disjunctive.reg_name&disjunctive.dep_name&disjunctive.com_name&sort=exer
+" role="button"  tabindex="0">l'Observatoire des finances et de la Gestion Publique locales</a> pour l'année de 2024.<br></p>
+<p>Tous les fichiers créés ici sont disponibles sur mon 
+<a href="https://github.com/salomerabec/projets_site/tree/main/dataminingcommunes
+" role="button"  tabindex="0">GitHub</a>.
+</p>
+
+<h2>I/. Prototype : détection basique</h2>
+<br>
+<h3>Visualisation des données</h3>
+<br>
+<div class="carousel" id="carousel1"  role="region"
+     aria-roledescription="carousel"
+     aria-label="Carousel des graphiques"
+     aria-live="off">
+  <button class="prev"
+          aria-label="Image précédente">&#10094;</button>
+
+  <div class="slides" role="list">
+  <img src="./anomaliesdepensescommunes/Distribution des dépenses de fonctionnement par habitant (log-transformé).png" alt="Distribution des dépenses de fonctionnement par habitant (log-transformé)" role="group" aria-roledescription="slide" aria-label="1 sur 2" class="slide" onclick="openLightbox(this)" >
+  <img src="./anomaliesdepensescommunes/Distribution des dépenses d'investissement par habitant (log-transformé).png" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 2" alt="Distribution des dépenses d'investissement par habitant (log-transformé)"  onclick="openLightbox(this)" >
+ 
+  </div>
+
+  <button class="next"   aria-label="Image suivante" >&#10095;</button>
+ <div class="thumbnails">
+  <button class="thumb active" data-index="0" aria-label="Aller à l'image 1 sur 2">
+    <img src="./anomaliesdepensescommunes/Distribution des dépenses de fonctionnement par habitant (log-transformé).png" alt="">
+  </button>
+
+  <button class="thumb" data-index="1" aria-label="Aller à l'image 2 sur 2">
+    <img src="./anomaliesdepensescommunes/Distribution des dépenses d'investissement par habitant (log-transformé).png" alt="">
+  </button>
+</div>
+</div>
+
+<br>
+<p>Grâce aux données téléchargées de 2024, on peut illustrer la distribution des dépenses de fonctionnement et d'investissement par habitant (on passe au logarithme 
+  pour avoir une meilleure visibilité des écarts). En utilisant la bibliothèque geopandas sur python, on peut de plus illustrer les dépenses d'investissement par habitant 
+  de chaque commune sous forme de carte et commencer à voir leurs différences :
+</p><br>
+
+    <!--  
+<div class="photos">
+  <img src="./anomaliesdepensescommunes/carte des dépenses d'investissement par habitant (log-transformé).png" alt="Carte des dépenses d'investissement par habitant (log-transformé)"  onclick="openLightbox(this)" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+</div>
+-->
+
+<h5 style="font-size: 20px;
+  text-align: start;
+  width:90%">Carte interactive :</h5><br><br>
+
+<iframe 
+    src="anomaliesdepensescommunes/carte_interactive.html" 
+    width="1500" 
+    height="1100" 
+    style="border:none;">
+</iframe>
+
+
+<br>
+
+<p>Maintenant, pour identifier les noms des communes présentant des anomalies au niveau de leurs dépenses je vais utiliser deux méthodes différentes.</p>
+<br>
+
+<h3>Modèle : méthode de statistique classique</h3>
+
+<div class="carousel" id="carousel3"  role="region"
+     aria-roledescription="carousel"
+     aria-label="Carousel des graphiques"
+     aria-live="off">
+  <button class="prev"
+          aria-label="Image précédente">&#10094;</button>
+
+  <div class="slides" role="list">
+  <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies (z-score > 3), méthode classique.png" alt="Dépenses communes : normales vs anomalies, méthode classique" role="group" aria-roledescription="slide" aria-label="1 sur 3" class="slide" onclick="openLightbox(this)" >
+  <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies (z-score > 3), méthode classique, log transformé.png" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3" alt="Dépenses communes : normales vs anomalies, méthode classique, log-transformé"  onclick="openLightbox(this)" >
+   <img src="./anomaliesdepensescommunes/Communes anormales détectées, méthode classique.png" class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3" alt="Communes anormales détectées, méthode classique"  onclick="openLightbox(this)" >
+
+  </div>
+
+  <button class="next"   aria-label="Image suivante" >&#10095;</button>
+ <div class="thumbnails">
+  <button class="thumb active" data-index="0" aria-label="Aller à l'image 1 sur 3">
+    <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies (z-score > 3), méthode classique.png" alt="">
+  </button>
+
+  <button class="thumb" data-index="1" aria-label="Aller à l'image 2 sur 3">
+    <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies (z-score > 3), méthode classique, log transformé.png" alt="">
+  </button>
+
+   <button class="thumb" data-index="1" aria-label="Aller à l'image 3 sur 3">
+    <img src="./anomaliesdepensescommunes/Communes anormales détectées, méthode classique.png" alt="">
+  </button> 
+
+</div>
+</div>
+
+<br><br>
+<p>Les points rouges illustrent ici les communes considérées comme ayant des dépenses de fonctionnement "anormales" (statistiquement par rapport à la moyenne), alors 
+  que les points bleus sont les communes "normales". En passant au logarithme on peut mieux visualiser la répartition des villes. Enfin, lorsque les 
+  communes en rouges sont reportées sur la carte on peut se rendre compte que beaucoup ont des points communs au niveau de leur localisation.
+</p>
+
+<br><br><br>
+
+<h3>Modèle : méthode Isolation Forest</h3>
+
+<div class="carousel" id="carousel2"  role="region"
+     aria-roledescription="carousel"
+     aria-label="Carousel des graphiques"
+     aria-live="off">
+  <button class="prev"
+          aria-label="Image précédente">&#10094;</button>
+
+  <div class="slides" role="list">
+  <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies, méthode Isolation Forest.png" alt="Dépenses communes : normales vs anomalies, méthode Isolation Forest" role="group" aria-roledescription="slide" aria-label="1 sur 3" class="slide" onclick="openLightbox(this)" >
+  <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies, méthode Isolation Forest, log-transformé.png" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3" alt="Dépenses communes : normales vs anomalies, méthode Isolation Forest, log-transformé"  onclick="openLightbox(this)" >
+   <img src="./anomaliesdepensescommunes/Communes anormales détectées, méthode Isolation Forest.png" class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3" alt="Communes anormales détectées, méthode Isolation Forest"  onclick="openLightbox(this)" >
+
+  </div>
+
+  <button class="next"   aria-label="Image suivante" >&#10095;</button>
+ <div class="thumbnails">
+  <button class="thumb active" data-index="0" aria-label="Aller à l'image 1 sur 3">
+    <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies, méthode Isolation Forest.png" alt="">
+  </button>
+
+  <button class="thumb" data-index="1" aria-label="Aller à l'image 2 sur 3">
+    <img src="./anomaliesdepensescommunes/Dépenses communes : normales vs anomalies, méthode Isolation Forest, log-transformé.png" alt="">
+  </button>
+
+   <button class="thumb" data-index="1" aria-label="Aller à l'image 3 sur 3">
+    <img src="./anomaliesdepensescommunes/Communes anormales détectées, méthode Isolation Forest.png" alt="">
+  </button> 
+
+</div>
+</div>
+
+<br><br>
+<p>On peut maintenant vérifier que les résultats des deux méthodes sont cohérents entre eux, la deuxième méthode semblant plus précise.
+</p>
+
+
+
+<br><br>
+<h3>Analyse</h3>
+<br>
+<p>Après avoir extrait les vingts villes présentant les plus grandes anomalies statistiques, je peux les analyser et les classer en différentes catégories.</p>
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Code Insee 2024 Commune</th>
+      <th>Nom 2024 Commune</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>38527</td>
+      <td>Vaujany</td>
+      <td>350</td>
+    </tr>
+    <tr>
+      <td>38289</td>
+      <td>Oz</td>
+      <td>216</td>
+    </tr>
+    <tr>
+      <td>55087</td>
+      <td>Bure</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>65017</td>
+      <td>Aragnouet</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>38375</td>
+      <td>Saint-Christophe-en-Oisans</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>38191</td>
+      <td>Huez</td>
+      <td>1313</td>
+    </tr>
+    <tr>
+      <td>66004</td>
+      <td>Les Angles</td>
+      <td>547</td>
+    </tr>
+    <tr>
+      <td>11147</td>
+      <td>Fontanès-de-Sault</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>74173</td>
+      <td>Megève</td>
+      <td>3077</td>
+    </tr>
+    <tr>
+      <td>73227</td>
+      <td>Courchevel</td>
+      <td>2386</td>
+    </tr>
+    <tr>
+      <td>38253</td>
+      <td>Les Deux Alpes</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <td>05110</td>
+      <td>Puy-Saint-Vincent</td>
+      <td>284</td>
+    </tr>
+    <tr>
+      <td>74134</td>
+      <td>Les Gets</td>
+      <td>1251</td>
+    </tr>
+    <tr>
+      <td>73257</td>
+      <td>Les Belleville</td>
+      <td>3586</td>
+    </tr>
+    <tr>
+      <td>38550</td>
+      <td>Villard-Reculas</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td>57682</td>
+      <td>Turquestein-Blancrupt</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>65388</td>
+      <td>Saint-Lary-Soulan</td>
+      <td>856</td>
+    </tr>
+    <tr>
+      <td>65192</td>
+      <td>Gavarnie-Gèdre</td>
+      <td>350</td>
+    </tr>
+    <tr>
+      <td>05098</td>
+      <td>Les Orres</td>
+      <td>532</td>
+    </tr>
+    <tr>
+      <td>77291</td>
+      <td>Le Mesnil-Amelot</td>
+      <td>1020</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<h4>1) Stations de ski/communes touristiques (ex : Vaujany, Oz, Huez, Megève, Courchevel, Les Gets, Les Deux Alpes, Les Orres, Les Belleville, etc.)</h4>
+<br>
+<p>Toutes ces communes ont les caractéristiques suivantes : </p>
+<ul>
+<li>Population permanente très faible (< 2000 habitants)</li>
+<li>Dépenses d’investissement massives pour infrastructures touristiques (remontées mécaniques, parkings, routes d’accès, équipements sportifs)</li>
+<li>Forte variabilité saisonnière du fonctionnement communal</li>
+<li>Ratio dépenses / habitant artificiellement très élevé</li>
+</ul>
+<br>
+<h4> 2) Communes pyrénéennes touristiques (Aragnouet, Saint-Lary-Soulan, Gavarnie-Gèdre)</h4>
+<br>
+<p>Ces communes suivent la même logique que ci-dessus :</p>
+<ul>
+<li>Très petite population</li>
+<li>Station de ski + tourisme montagne</li>
+<li>Gros investissements structurels</li>
+</ul>
+<br>
+
+<h4>3) Cas isolés non-stations (Turquestein-Blancrupt, Bure, Fontanès-de-Sault)</h4> 
+<br>
+<ul>
+  <li>Ce sont des communes extrêmement petites (< 100 habitants) :</li>
+  <li>Une seule dépense exceptionnelle suffit à exploser le ratio (ex : rénovation d’un bâtiment communal)</li>
+</ul>
+</p>
+
+<h4>Conclusion</h4>
+<br>
+<p>
+Les communes identifiées ne sont pas nécessairement suspectes de fraude : ce sont principalement de stations de ski et de communes touristiques dont la population permanente est très faible et les investissements structurellement très élevés.
+Le modèle détecte donc des anomalies structurelles, liées au mode de calcul “par habitant”, et non des irrégularités comptables.
+</p>
+<p style="color: red; text-align: center;font-weight: bold;">Chercher des anomalies statistiques sur l'ensemble des communes n'est donc pas suffisant pour détecter des erreurs comptable</p>
+<br>
+
+<h2>II/. Affinage de la méthode</h2>
+<br>
+
+<p>Pour essayer d'affiner mon programme j'ai cette fois-ci utilisé les données de <a href="  https://data.ofgl.fr/explore/dataset/ofgl-base-communes/table/?disjunctive.nomen&disjunctive.agregat&disjunctive.tranche_revenu_imposable_par_habitant&disjunctive.tranche_population&disjunctive.epci_name&disjunctive.reg_name&disjunctive.dep_name&disjunctive.com_name&sort=exer
+" role="button"  tabindex="0">l'Observatoire des finances et de la Gestion Publique locales</a> pour les années de 2020 à 2024, afin de pouvoir faire des comparaisons 
+des dépenses des villes avec leurs propres dépenses des années précédentes.</p>
+
+
+    <!--  tableau en html  live server  -->
+
+<br>
+<h2>Difficultés, et si c'était à refaire</h2>
+
+<ul>
+<li></li>
+
+</ul>
+
+
+
+
+<br>
+<div class="date">
+  En cours de rédaction<br>
+  Rédigé le 6 décembre 2025<br>
+  Ces graphiques sont créés à but d'exercice et n'ont pas été revérifiés
+</div>
+
+
+  </section>
+
+
+    <!-- Fenêtre Lightbox cachée au départ -->
+    <div
+      id="lightbox"
+      class="lightbox"
+      onclick="closeLightbox()"
+      onkeydown="if(event.key === 'Enter' || event.key === ' ') closeLightbox()"
+      tabindex="0"
+      role="dialog"
+      aria-modal="true"
+    >
+      <span
+        class="close"
+        tabindex="0"
+        role="button"
+        aria-label="Fermer la lightbox"
+        >&times;</span
+      >
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+
+
+
+  <section id="projets" class="section projets">
+
+    <h2><br><br>
+      Autres Projets
+      <br><br>
+    </h2>
+
+    <!-- Barre de recherche -->
+    <input type="text" id="searchBar" placeholder="Rechercher un projet..." />
+
+    <!-- Menu déroulant pour filtrer par tags -->
+    <select id="filterTags" aria-label="Filtrer par catégorie">
+      <option value="all">Tous</option>
+      <option value="web">Web</option>
+      <option value="Data">Data</option>
+      <option value="crypto">Cryptographie</option>
+    </select>
+
+            <!-- Grille des projets -->
+                   <div id="projectsGrid" class="grid">
+
+<a href="site.html" class="project" data-tags="Web" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Création de ce site</h3>
+        <p>Premier projet web 🌐</p>
+
+      </a>
+
+                <a href="accessibilite.html" class="project" data-tags="Web Handicap" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Accessibilité du site</h3>
+        <p>Projet web basé sur le RGAA ♿️</p>
+
+      </a>
+
+<a href="jishotoanki.html" class="project" data-tags="Web" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Jisho to Anki</h3>
+        <p>Une extension Firefox de dictionnaire 🇯🇵</p>
+
+      </a>
+
+                <a href="renneslogements.html" class="project" data-tags="Data" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Étude statistique 📊</h3>
+        <p>Dynamique logements-population à Rennes</p>
+
+      </a>
+            </div>
+
+    <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
+      <br><br>
+  Projets à venir... ⏳
+  <br><br><br><br>
+  </div>
+   
+            
+    <br><br><br>
+  </section>
+
+
+
+
+
+  <section id="contact" class="section contact">
+    <h2><br><br>Contacts<br></h2>
+    <div class="contact-links">
+
+
+      <a href="mailto:salomerabec@aliceadsl.fr">
+        <img src="mail.svg" alt="Email" id="mail">
+      </a>
+      <a href="https://www.linkedin.com/in/salomerabec/" target="_blank">
+        <img src="link.svg" alt="lien LinkedIn" id="link">
+      </a>
+      <a href="https://github.com/salomerabec" target="_blank">
+        <img src="git.svg" alt="Lien GitHub" id="git">
+      </a>
+
+    </div>
+    <br><br><br>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Salomé RABEC | Fait main, avec passion et curiosité 🌱 | Tous droits réservés
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="nav.js">    </script>
+  <script src="lightbox.js"></script>
+
+
+
+
+
+
+<script>
+function initCarousel(carousel) {
+
+  const slidesContainer = carousel.querySelector('.slides');
+  const slides = carousel.querySelectorAll('.slide');
+  const thumbs = carousel.querySelectorAll('.thumb');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+
+  let index = 0;
+
+  function showSlide(i) {
+    index = i;
+
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumbs[index].classList.add("active");
+  }
+
+  // flèches
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  // miniatures
+  thumbs.forEach((thumb, i) => {
+    thumb.addEventListener("click", () => {
+      showSlide(i);
+    });
+  });
+
+  showSlide(0);
+}
+
+// INITIALISATION DE TOUS LES CARROUSELS
+document.querySelectorAll(".carousel").forEach(initCarousel);
+</script>
+
+<script src="recherche.js"></script>
+
+
+
+</body>
+
+</html>

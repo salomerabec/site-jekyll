@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibilité</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<script src="nuit.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="article.css" />
+    
+
+</head>
+
+<body>
+
+
+    <div id="loader">
+        <div class="spinner"></div> 
+    </div>
+
+
+
+  <nav>
+    <a href="index.html">Mon parcours</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" id="btn-projets" aria-haspopup="true" aria-controls="menu-projets" aria-expanded="false">
+        Projets ▾
+      </button>
+
+      <ul class="dropdown-content" id="menu-projets" hidden>
+        <li><a href="site.html">Création du site</a></li>
+        <li><a href="accessibilite.html">Accessibilité du site</a></li>
+        <li><a href="renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+        <li><a href="jishotoanki.html">Jisho to Anki</a></li>    
+        <li><a style="text-decoration: underline;" href="projet.html">Voir tout</a></li>    
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="btn-passions" type="button" aria-haspopup="true" aria-controls="menu-passions"
+        aria-expanded="false">
+        Passions ▾
+      </button>
+
+      <ul class="dropdown-content" id="menu-passions" hidden>
+        <li><a href="patisserie.html">Pâtisserie</a></li>
+        <li><a href="jardin.html">Jardinage</a></li>
+      </ul>
+    </div>
+    <a href="amenagements.html">Aménagements</a>
+
+    <a href="contact.html">Contacts</a>
+  </nav>
+
+
+
+
+<section id="lune" class="section lune">
+    <button id="modeNuitButton">
+        <img src="moon.svg"  alt="Bouton mode nuit" id="luneIcon">
+    </button>
+</section>
+
+
+
+<section id="article" class="section article">
+
+    <h2>Accessibilité numérique du site</h2>
+
+Langages utilisés :  <br>
+
+<section id="lang" class="section lang">
+<img src="htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
+<img src="js.svg"  alt="Logo Javascript"  id="jslogo">
+</section>
+
+
+<br><br><br>
+<p>Une des missions du service public est de rendre ses productions accessibles à tous. <br>
+    Lorsque cela concerne le numérique, il est important de respecter certaines règles dans la création de documents pour faciliter leur lecture par les technologies d'assistance, utilisées notamment par les personnes malvoyantes ou ayant un handicap moteur.<br>
+Le gouvernement français a pour cela établi une <a href="https://accessibilite.numerique.gouv.fr/" role="button"  tabindex="0">liste de critères</a> à respecter nommée RGAA.
+</p>
+
+<br>
+
+<p>Lors de la création de ce site, voici ce que j'ai appris à faire pour respceter ces normes d'accessibilité au maximum :</p>
+
+<br>
+<h3>📌 Structure HTML</h3>
+
+<p>Lors de la création de chaque page j'ai bien fait attention à utiliser les balises sémantiques &lt;header&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;footer&gt;. Il faut aussi n'utiliser qu'une seule fois par page le &lt;h1&gt; et utiliser ensuite &lt;h2&gt; et &lt;h3&gt; de façon cohérente.
+</p>
+<p>Les liens hypertextes doivent aussi avoir un texte explicite (“Voir le projet X” plutôt que “Cliquez ici”).</p>
+
+<br><br>
+<h3>📌 Alternatives textuelles aux images</h3>
+
+<p>Toutes les images doivent avoir dans leur code HTML un alt="" qui décrit entre les guillemets ce qui est représenté. Lorsqu'une image est seulement décorative, on écrit alt="" vide.<br>
+Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peut pas être utilisé ici.</p>
+<br>
+
+<div class="altertext">
+  <img src="./accessibilite/alt.png" alt="Capture d'écran du code HTML de ma page Pâtisserie"  onclick="openLightbox(this)">
+</div>
+<br>
+<br>
+
+<h3>📌 Navigation clavier</h3>
+
+<p>Pour qu'un site soit accessible, il faut que chaque bouton soit accessible en utilisant uniquement le clavier et les touches Tab, Shift, Entrée et Espace.</p>
+<p>Le plus long et difficile a été de faire en sorte que le menu déroulant soit à la fois accessible par clic en s'affichant en cas de survol, et par utilisation du focus : </p>
+<br>
+<div class="focus">
+  <img src="./accessibilite/focus.png" alt="Capture d'écran du menu avec le focus"  onclick="openLightbox(this)">
+</div>
+
+<br>
+<br>
+
+<h3>📌 Couleurs et contrastes</h3>
+
+<p>Le texte et le fond doivent avoir un contraste suffisant dans leurs couleurs pour être lisibles par tous. Pour cela j'ai utilisé l'outil Lighthouse de Google Chrome pour faire un diagnostic de mon site, et j'en ai profité pour changer quelques couleurs :</p>
+<br>
+
+<div class="contraste">
+  <img src="./accessibilite/contraste.png" alt="Capture d'écran de l'outil Lighthouse appliqué à ma page d'accueil"  onclick="openLightbox(this)">
+</div>
+<br>
+<br>
+
+<h3>📌 Formulaires et ARIA</h3>
+
+<p>Pour chaque zone de texte interactive, il est important d'ajouter un label qui indique ce qui doit être rentré dans le champ.</p>
+<p>J'ai ensuite utilisé les attributs ARIA (Accessible Rich Internet Applications) qui permettent de rendre les contenus et widgets interactifs accessibles aux technologies d’assistance (lecteurs d’écran, synthèse vocale, etc.), quand le HTML standard ne suffit pas.</p>
+
+<br>
+<div class="aria">
+  <img src="./accessibilite/aria.png" alt="Liste des éléments ARIA existant"  onclick="openLightbox(this)">
+</div>
+
+<br><br><br>
+<p>Au final, en appliquant ces 5 points principaux et en prenant le réflexe de les utiliser dans chaque projet, j'espère pouvoir rendre mes sites et programmes plus accueillants pour tous. C'est à la fois une chose qui me tient à coeur personnellement, une exigence dans le service public et un gage de qualité. ✨</p>
+<br><br>
+<div class="fin">
+  <img src="./accessibilite/fin.png" alt="Image de Lighthouse avec Google Chrome dans l'onglet Accessibilité"  onclick="openLightbox(this)">
+</div>
+
+<div class="date">
+  Rédigé le 29 octobre 2025
+</div>
+
+
+</section>
+
+
+<!-- Fenêtre Lightbox cachée au départ -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+
+    <section id="projets" class="section projets">
+
+
+                  
+
+        <h2><br><br>
+            Autres Projets
+        <br><br></h2>
+        
+            
+    <!-- Barre de recherche -->
+    <input type="text" id="searchBar" placeholder="Rechercher un projet..." />
+
+    <!-- Menu déroulant pour filtrer par tags -->
+    <select id="filterTags" aria-label="Filtrer par catégorie">
+      <option value="all">Tous</option>
+      <option value="web">Web</option>
+      <option value="Data">Data</option>
+      <option value="crypto">Cryptographie</option>
+    </select>
+
+            <!-- Grille des projets -->
+                   <div id="projectsGrid" class="grid">
+
+<a href="site.html" class="project" data-tags="Web" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Création de ce site</h3>
+        <p>Premier projet web 🌐</p>
+
+      </a>
+
+                <a href="accessibilite.html" class="project" data-tags="Web Handicap" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Accessibilité du site</h3>
+        <p>Projet web basé sur le RGAA ♿️</p>
+
+      </a>
+
+<a href="jishotoanki.html" class="project" data-tags="Web" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Jisho to Anki</h3>
+        <p>Une extension Firefox de dictionnaire 🇯🇵</p>
+
+      </a>
+
+                <a href="renneslogements.html" class="project" data-tags="Data" role="button" tabindex="0"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+
+        <h3>Étude statistique 📊</h3>
+        <p>Dynamique logements-population à Rennes</p>
+
+      </a>
+            </div>
+
+    <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
+      <br><br>
+  Projets à venir... ⏳
+  <br><br><br><br>
+  </div>
+   
+            
+    <br><br><br>
+  </section>
+
+
+
+    <section id="contact" class="section contact">
+        <h2><br><br>Contacts<br></h2>
+        <div class="contact-links">
+
+
+            <a href="mailto:salomerabec@aliceadsl.fr">
+                <img src="mail.svg"  alt="Email" id="mail">
+            </a>
+            <a href="https://www.linkedin.com/in/salomerabec/" target="_blank">
+                <img src="link.svg"  alt="lien LinkedIn" id="link">
+            </a>
+            <a href="https://github.com/salomerabec" target="_blank">
+                <img src="git.svg" alt="Lien GitHub" id="git">
+              </a>
+
+        </div>
+        <br><br><br>
+    </section>
+
+    <footer>
+        &copy; <span id="year"></span> Salomé RABEC | Fait main, avec passion et curiosité 🌱 | Tous droits réservés
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="lightbox.js"></script>
+<script src="nav.js">    </script>
+<script src="recherche.js"></script>
+
+</body>
+
+</html>
