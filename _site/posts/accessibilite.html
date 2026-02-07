@@ -11,30 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- CSS global -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/carousel.css">
-  <link rel="stylesheet" href="/assets/css/article.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <link rel="stylesheet" href="/assets/css/contact.css">
-  <link rel="stylesheet" href="/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/style.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/carousel.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/article.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/index.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contact.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/projet.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/nav.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/modenuit.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/lightbox.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/footer.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contactbaspage.css">
 
 
   <!-- JS global -->
-  <script src="/assets/js/nuit.js"></script>
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/nav.js"></script>
-  <script src="/assets/js/navtel.js"></script>
-  <script src="/assets/js/recherche.js"></script>
-  <script src="/assets/js/carousel.js"></script>
-  <script src="/assets/js/lightbox.js"></script>
-  <script src="/assets/js/contact.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="/site-jekyll/assets/js/nuit.js"></script>
+  <script src="/site-jekyll/assets/js/script.js"></script>
+  <script src="/site-jekyll/assets/js/nav.js"></script>
+  <script src="/site-jekyll/assets/js/navtel.js"></script>
+  <script src="/site-jekyll/assets/js/recherche.js"></script>
+  <script src="/site-jekyll/assets/js/carousel.js"></script>
+  <script src="/site-jekyll/assets/js/lightbox.js"></script>
+  <script src="/site-jekyll/assets/js/contact.js"></script>
+  <script src="/site-jekyll/assets/js/index.js"></script>
 
 
   <!-- Favicons -->
-  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" href="/site-jekyll/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="/site-jekyll/assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/site-jekyll/assets/img/favicon.svg">
 </head>
 
 <body>
@@ -43,37 +49,28 @@
 <header class="mobile-header">
   <button id="menu-btn" aria-label="Ouvrir le menu">☰</button>
   <span class="logo">Menu</span>
-
-  <button id="modeNuitButton">
-    <!-- Lune pour desktop et mobile -->
-    <img src="/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
-    <img src="/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
-
-    <!-- Soleil unique -->
-    <img src="/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
-  </button>
 </header>
 
 <!-- MENU MOBILE -->
 <nav id="mobile-menu" aria-hidden="true">
   <ul>
-    <li><a href="/index.html">Mon parcours</a></li>
+    <li><a href="/site-jekyll/index.html">Mon parcours</a></li>
 
     <li class="menu-title">► Projets</li>
-    <li><a href="/posts/site.html">Création du site</a></li>
-    <li><a href="/posts/accessibilite.html">Accessibilité</a></li>
-    <li><a href="/posts/renneslogements.html">Étude logements</a></li>
-    <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-    <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+    <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+    <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité</a></li>
+    <li><a href="/site-jekyll/posts/renneslogements.html">Étude logements</a></li>
+    <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+    <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     <li class="menu-divider"></li>
 
     <li class="menu-title">► Passions</li>
-    <li><a href="/patisserie.html">Pâtisserie</a></li>
-    <li><a href="/jardin.html">Jardinage</a></li>
+    <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+    <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     <li class="menu-divider"></li>
 
-    <li><a href="/amenagements.html">Aménagements</a></li>
-    <li><a href="/contact.html">Contacts</a></li>
+    <li><a href="/site-jekyll/amenagements.html">Aménagements</a></li>
+    <li><a href="/site-jekyll/contact.html">Contacts</a></li>
   </ul>
 </nav>
 
@@ -81,7 +78,7 @@
 
 <!-- MENU PC -->
 <nav>
-  <a href="/index.html">Mon parcours</a>
+  <a href="/site-jekyll/index.html">Mon parcours</a>
 
   <div class="dropdown">
     <button class="dropbtn" id="btn-projets"
@@ -92,11 +89,11 @@
     </button>
 
     <ul class="dropdown-content" id="menu-projets" hidden>
-      <li><a href="/posts/site.html">Création du site</a></li>
-      <li><a href="/posts/accessibilite.html">Accessibilité du site</a></li>
-      <li><a href="/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
-      <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-      <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+      <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+      <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité du site</a></li>
+      <li><a href="/site-jekyll/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+      <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+      <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     </ul>
   </div>
 
@@ -110,19 +107,23 @@
     </button>
 
     <ul class="dropdown-content" id="menu-passions" hidden>
-      <li><a href="/patisserie.html">Pâtisserie</a></li>
-      <li><a href="/jardin.html">Jardinage</a></li>
+      <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+      <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     </ul>
   </div>
 
-  <a href="/amenagements.html">Aménagements</a>
-  <a href="/contact.html">Contacts</a>
+  <a href="/site-jekyll/amenagements.html">Aménagements</a>
+  <a href="/site-jekyll/contact.html">Contacts</a>
+
+</nav>
 
   <!-- BOUTON MODE NUIT -->
-  <button id="modeNuitButton">
-    <img src="/assets/img/moon.svg" alt="Bouton mode nuit" id="luneIcon">
-  </button>
-</nav>
+
+<button id="modeNuitButton">
+  <img src="/site-jekyll/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
+  <img src="/site-jekyll/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
+  <img src="/site-jekyll/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
+</button>
 
 
   <main>
@@ -133,8 +134,8 @@
 Langages utilisés :  <br>
 
 <section id="lang" class="section lang">
-  <img src="/assets/img/htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
-  <img src="/assets/img/js.svg"  alt="Logo Javascript"  id="jslogo">
+  <img src="/site-jekyll/assets/img/htmlcss.svg"  alt="Logo HTML CSS"  id="htmlcsslogo">
+  <img src="/site-jekyll/assets/img/js.svg"  alt="Logo Javascript"  id="jslogo">
 </section>
 
 <br><br><br>
@@ -162,7 +163,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <br>
 
 <div class="altertext">
-  <img src="/assets/img/posts/accessibilite/alt.png" alt="Capture d'écran du code HTML de ma page Pâtisserie"  onclick="openLightbox(this)">
+  <img src="/site-jekyll/assets/img/posts/accessibilite/alt.png" alt="Capture d'écran du code HTML de ma page Pâtisserie"  onclick="openLightbox(this)">
 </div>
 <br>
 <br>
@@ -173,7 +174,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <p>Le plus long et difficile a été de faire en sorte que le menu déroulant soit à la fois accessible par clic en s'affichant en cas de survol, et par utilisation du focus : </p>
 <br>
 <div class="focus">
-  <img src="/assets/img/posts/accessibilite/focus.png" alt="Capture d'écran du menu avec le focus"  onclick="openLightbox(this)">
+  <img src="/site-jekyll/assets/img/posts/accessibilite/focus.png" alt="Capture d'écran du menu avec le focus"  onclick="openLightbox(this)">
 </div>
 
 <br>
@@ -185,7 +186,7 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 <br>
 
 <div class="contraste">
-  <img src="/assets/img/posts/accessibilite/contraste.png" alt="Capture d'écran de l'outil Lighthouse appliqué à ma page d'accueil"  onclick="openLightbox(this)">
+  <img src="/site-jekyll/assets/img/posts/accessibilite/contraste.png" alt="Capture d'écran de l'outil Lighthouse appliqué à ma page d'accueil"  onclick="openLightbox(this)">
 </div>
 <br>
 <br>
@@ -197,14 +198,14 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 
 <br>
 <div class="aria">
-  <img src="/assets/img/posts/accessibilite/aria.png" alt="Liste des éléments ARIA existant"  onclick="openLightbox(this)">
+  <img src="/site-jekyll/assets/img/posts/accessibilite/aria.png" alt="Liste des éléments ARIA existant"  onclick="openLightbox(this)">
 </div>
 
 <br><br><br>
 <p>Au final, en appliquant ces 5 points principaux et en prenant le réflexe de les utiliser dans chaque projet, j'espère pouvoir rendre mes sites et programmes plus accueillants pour tous. C'est à la fois une chose qui me tient à coeur personnellement, une exigence dans le service public et un gage de qualité. ✨</p>
 <br><br>
 <div class="fin">
-  <img src="/assets/img/posts/accessibilite/fin.png" alt="Image de Lighthouse avec Google Chrome dans l'onglet Accessibilité"  onclick="openLightbox(this)">
+  <img src="/site-jekyll/assets/img/posts/accessibilite/fin.png" alt="Image de Lighthouse avec Google Chrome dans l'onglet Accessibilité"  onclick="openLightbox(this)">
 </div>
 
 <div class="date">
@@ -314,17 +315,17 @@ Pour les éléments iframe, j'ai ajouté un élément title="" car le alt ne peu
 
     <!-- Email -->
     <a href="mailto:salomerabec@aliceadsl.fr">
-      <img src="/assets/img/mail.svg" alt="Email" id="mail">
+      <img src="/site-jekyll/assets/img/mail.svg" alt="Email" id="mail">
     </a>
 
     <!-- LinkedIn (externe) -->
     <a href="https://www.linkedin.com/in/salomerabec/" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/link.svg" alt="Lien LinkedIn" id="link">
+      <img src="/site-jekyll/assets/img/link.svg" alt="Lien LinkedIn" id="link">
     </a>
 
     <!-- GitHub (externe) -->
     <a href="https://github.com/salomerabec" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/git.svg" alt="Lien GitHub" id="git">
+      <img src="/site-jekyll/assets/img/git.svg" alt="Lien GitHub" id="git">
     </a>
 
   </div>

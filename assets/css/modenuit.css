@@ -1,0 +1,56 @@
+/* BOUTON MODE NUIT COMMUN */
+#modeNuitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s;
+}
+
+#modeNuitButton:hover {
+  transform: scale(1.1);
+}
+
+#modeNuitButton img {
+  width: 30px;
+  height: 30px;
+}
+
+#luneIconDesktop {
+  display: none;
+}
+
+#luneIconMobile {
+  display: none;
+}
+
+#soleilIcon {
+  display: none;
+}
+
+/* === POSITION DESKTOP === */
+@media (min-width: 769px) {
+  #modeNuitButton {
+    position: absolute;
+    top: 15vh;
+    right: 5vw;
+  }
+}
+
+/* === POSITION MOBILE === */
+@media (max-width: 768px) {
+  #modeNuitButton {
+    position: fixed;
+    top: 8px;
+    right: 16px;
+    z-index: 2100; /* au-dessus du menu mobile */
+  }
+
+  #modeNuitButton img {
+    width: 24px;
+    height: 24px;
+  }
+}

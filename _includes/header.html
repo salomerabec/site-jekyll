@@ -2,15 +2,6 @@
 <header class="mobile-header">
   <button id="menu-btn" aria-label="Ouvrir le menu">☰</button>
   <span class="logo">Menu</span>
-
-  <button id="modeNuitButton">
-    <!-- Lune pour desktop et mobile -->
-    <img src="{{ '/assets/img/moon.svg' | relative_url }}" alt="Mode nuit" id="luneIconDesktop">
-    <img src="{{ '/assets/img/moon2.svg' | relative_url }}" alt="Mode nuit" id="luneIconMobile">
-
-    <!-- Soleil unique -->
-    <img src="{{ '/assets/img/sun.svg' | relative_url }}" alt="Mode jour" id="soleilIcon">
-  </button>
 </header>
 
 <!-- MENU MOBILE -->
@@ -77,8 +68,12 @@
   <a href="{{ '/amenagements.html' | relative_url }}">Aménagements</a>
   <a href="{{ '/contact.html' | relative_url }}">Contacts</a>
 
-  <!-- BOUTON MODE NUIT -->
-  <button id="modeNuitButton">
-    <img src="{{ '/assets/img/moon.svg' | relative_url }}" alt="Bouton mode nuit" id="luneIcon">
-  </button>
 </nav>
+
+  <!-- BOUTON MODE NUIT -->
+
+<button id="modeNuitButton">
+  <img src="{{ '/assets/img/moon.svg' | relative_url }}" alt="Mode nuit" id="luneIconDesktop">
+  <img src="{{ '/assets/img/moon2.svg' | relative_url }}" alt="Mode nuit" id="luneIconMobile">
+  <img src="{{ '/assets/img/sun.svg' | relative_url }}" alt="Mode jour" id="soleilIcon">
+</button>

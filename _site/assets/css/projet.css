@@ -1,0 +1,84 @@
+/*SECTION PROJETS BAS DE PAGE*/
+
+.projets {
+  background-color: #9ed697;
+  flex-grow: 1;
+}
+
+.project {
+  display: block; /* rend le lien cliquable sur tout le bloc */
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  text-decoration: none; /* supprime le soulignement */
+  color: inherit; /* garde la couleur du texte */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 250px;
+  height: 180px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  
+}
+
+.project:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* reste propre au survol */
+transform: scale(1.05);
+}
+
+/* Style du champ de recherche et du menu déroulant */
+#searchBar, #filterTags {
+width: 100%;
+max-width: 300px;
+padding: 10px;
+margin: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+/* Style de la grille des projets */
+.grid {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+margin-top: 20px;
+justify-items: stretch; /* étend les projets uniformément */
+align-items: stretch; 
+
+}
+
+.project.nuit {
+  background-color: #000e2c;
+  border: 1px solid #ddd;
+  }
+
+h3 {
+    margin-bottom: 4vh; /* espace sous le titre */
+}
+
+.projets.nuit{
+background-color: #000d2b;
+color: #ffffff;
+}
+
+.projets.nuit h2 {
+color: #ffffff;
+}
+
+/* Appliquer le mode nuit quand le body a la classe 'nuit' */
+body.nuit .project {
+  background-color: #000e2c;
+  border: 1px solid #ddd;
+  color: #ffffff;
+}
+
+body.nuit .projets {
+  background-color: #000d2b;
+  color: #ffffff;
+}
+
+body.nuit .projets h2 {
+  color: #ffffff;
+}

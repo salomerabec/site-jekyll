@@ -137,13 +137,31 @@
   border-radius: 5px;
 }
 
+/* Appliquer le mode nuit quand le body a la classe 'nuit' */
+body.nuit .contact-form {
+  background-color: #00093f;
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+body.nuit .form-group button {
+  background-color: #273672;
+  color: white;
+}
+
+body.nuit .form-group button:hover {
+  background-color: #6171bb;
+}
+
+body.nuit .additional-content {
+  background-color: #00093f;
+  color: white;
+  border: 1px solid #ffffff;
+}
+
 h3 {
   margin-bottom: 4vh; /* Ajuste cette valeur pour avoir plus ou moins d'espace sous le titre */
 }
-
-
-
-
 
 .taille {
   width: 250px;

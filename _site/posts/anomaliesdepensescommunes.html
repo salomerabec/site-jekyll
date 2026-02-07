@@ -11,30 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- CSS global -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/carousel.css">
-  <link rel="stylesheet" href="/assets/css/article.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <link rel="stylesheet" href="/assets/css/contact.css">
-  <link rel="stylesheet" href="/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/style.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/carousel.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/article.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/index.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contact.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/projet.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/nav.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/modenuit.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/lightbox.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/footer.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contactbaspage.css">
 
 
   <!-- JS global -->
-  <script src="/assets/js/nuit.js"></script>
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/nav.js"></script>
-  <script src="/assets/js/navtel.js"></script>
-  <script src="/assets/js/recherche.js"></script>
-  <script src="/assets/js/carousel.js"></script>
-  <script src="/assets/js/lightbox.js"></script>
-  <script src="/assets/js/contact.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="/site-jekyll/assets/js/nuit.js"></script>
+  <script src="/site-jekyll/assets/js/script.js"></script>
+  <script src="/site-jekyll/assets/js/nav.js"></script>
+  <script src="/site-jekyll/assets/js/navtel.js"></script>
+  <script src="/site-jekyll/assets/js/recherche.js"></script>
+  <script src="/site-jekyll/assets/js/carousel.js"></script>
+  <script src="/site-jekyll/assets/js/lightbox.js"></script>
+  <script src="/site-jekyll/assets/js/contact.js"></script>
+  <script src="/site-jekyll/assets/js/index.js"></script>
 
 
   <!-- Favicons -->
-  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" href="/site-jekyll/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="/site-jekyll/assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/site-jekyll/assets/img/favicon.svg">
 </head>
 
 <body>
@@ -43,37 +49,28 @@
 <header class="mobile-header">
   <button id="menu-btn" aria-label="Ouvrir le menu">☰</button>
   <span class="logo">Menu</span>
-
-  <button id="modeNuitButton">
-    <!-- Lune pour desktop et mobile -->
-    <img src="/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
-    <img src="/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
-
-    <!-- Soleil unique -->
-    <img src="/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
-  </button>
 </header>
 
 <!-- MENU MOBILE -->
 <nav id="mobile-menu" aria-hidden="true">
   <ul>
-    <li><a href="/index.html">Mon parcours</a></li>
+    <li><a href="/site-jekyll/index.html">Mon parcours</a></li>
 
     <li class="menu-title">► Projets</li>
-    <li><a href="/posts/site.html">Création du site</a></li>
-    <li><a href="/posts/accessibilite.html">Accessibilité</a></li>
-    <li><a href="/posts/renneslogements.html">Étude logements</a></li>
-    <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-    <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+    <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+    <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité</a></li>
+    <li><a href="/site-jekyll/posts/renneslogements.html">Étude logements</a></li>
+    <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+    <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     <li class="menu-divider"></li>
 
     <li class="menu-title">► Passions</li>
-    <li><a href="/patisserie.html">Pâtisserie</a></li>
-    <li><a href="/jardin.html">Jardinage</a></li>
+    <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+    <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     <li class="menu-divider"></li>
 
-    <li><a href="/amenagements.html">Aménagements</a></li>
-    <li><a href="/contact.html">Contacts</a></li>
+    <li><a href="/site-jekyll/amenagements.html">Aménagements</a></li>
+    <li><a href="/site-jekyll/contact.html">Contacts</a></li>
   </ul>
 </nav>
 
@@ -81,7 +78,7 @@
 
 <!-- MENU PC -->
 <nav>
-  <a href="/index.html">Mon parcours</a>
+  <a href="/site-jekyll/index.html">Mon parcours</a>
 
   <div class="dropdown">
     <button class="dropbtn" id="btn-projets"
@@ -92,11 +89,11 @@
     </button>
 
     <ul class="dropdown-content" id="menu-projets" hidden>
-      <li><a href="/posts/site.html">Création du site</a></li>
-      <li><a href="/posts/accessibilite.html">Accessibilité du site</a></li>
-      <li><a href="/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
-      <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-      <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+      <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+      <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité du site</a></li>
+      <li><a href="/site-jekyll/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+      <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+      <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     </ul>
   </div>
 
@@ -110,19 +107,23 @@
     </button>
 
     <ul class="dropdown-content" id="menu-passions" hidden>
-      <li><a href="/patisserie.html">Pâtisserie</a></li>
-      <li><a href="/jardin.html">Jardinage</a></li>
+      <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+      <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     </ul>
   </div>
 
-  <a href="/amenagements.html">Aménagements</a>
-  <a href="/contact.html">Contacts</a>
+  <a href="/site-jekyll/amenagements.html">Aménagements</a>
+  <a href="/site-jekyll/contact.html">Contacts</a>
+
+</nav>
 
   <!-- BOUTON MODE NUIT -->
-  <button id="modeNuitButton">
-    <img src="/assets/img/moon.svg" alt="Bouton mode nuit" id="luneIcon">
-  </button>
-</nav>
+
+<button id="modeNuitButton">
+  <img src="/site-jekyll/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
+  <img src="/site-jekyll/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
+  <img src="/site-jekyll/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
+</button>
 
 
   <main>
@@ -152,7 +153,7 @@
     Langages utilisés :  <br>
 
     <section id="lang" class="section lang">
-      <img src="/assets/img/python.svg" alt="Logo Python" id="pythonlogo">
+      <img src="/site-jekyll/assets/img/python.svg" alt="Logo Python" id="pythonlogo">
     </section>
     <br><br>
 
@@ -175,18 +176,18 @@
       <button class="prev" aria-label="Image précédente">&#10094;</button>
 
       <div class="slides" role="list">
-        <img src="/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20de%20fonctionnement%20par%20habitant%20(log-transform%C3%A9).png" alt="Distribution des dépenses de fonctionnement par habitant (log-transformé)" role="group" aria-roledescription="slide" aria-label="1 sur 2" class="slide" onclick="openLightbox(this)">
-        <img src="/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20d" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 2" alt="Distribution des dépenses d'investissement par habitant (log-transformé)" onclick="openLightbox(this)">
+        <img src="/site-jekyll/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20de%20fonctionnement%20par%20habitant%20(log-transform%C3%A9).png" alt="Distribution des dépenses de fonctionnement par habitant (log-transformé)" role="group" aria-roledescription="slide" aria-label="1 sur 2" class="slide" onclick="openLightbox(this)">
+        <img src="/site-jekyll/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20d" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 2" alt="Distribution des dépenses d'investissement par habitant (log-transformé)" onclick="openLightbox(this)">
       </div>
 
       <button class="next" aria-label="Image suivante">&#10095;</button>
 
       <div class="thumbnails">
         <button class="thumb active" data-index="0" aria-label="Aller à l'image 1 sur 2">
-          <img src="/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20de%20fonctionnement%20par%20habitant%20(log-transform%C3%A9).png" alt="">
+          <img src="/site-jekyll/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20de%20fonctionnement%20par%20habitant%20(log-transform%C3%A9).png" alt="">
         </button>
         <button class="thumb" data-index="1" aria-label="Aller à l'image 2 sur 2">
-          <img src="/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20d" alt="">
+          <img src="/site-jekyll/assets/img/dataminingcommunes/Distribution%20des%20d%C3%A9penses%20d" alt="">
         </button>
       </div>
     </div>
@@ -197,7 +198,7 @@
     <h5 style="font-size: 20px; text-align: start; width:90%">Carte interactive :</h5><br><br>
 
     <iframe 
-        src="/assets/img/dataminingcommunes/carte_interactive.html" 
+        src="/site-jekyll/assets/img/dataminingcommunes/carte_interactive.html" 
         width="1500" 
         height="1100" 
         style="border:none;">
@@ -213,22 +214,22 @@
       <button class="prev" aria-label="Image précédente">&#10094;</button>
 
       <div class="slides" role="list">
-        <img src="/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique.png" alt="Dépenses communes : normales vs anomalies, méthode classique" role="group" aria-roledescription="slide" aria-label="1 sur 3" class="slide" onclick="openLightbox(this)">
-        <img src="/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique,%20log%20transform%C3%A9.png" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3" alt="Dépenses communes : normales vs anomalies, méthode classique, log-transformé" onclick="openLightbox(this)">
-        <img src="/assets/img/dataminingcommunes/Communes%20anormales%20d%C3%A9tect%C3%A9es,%20m%C3%A9thode%20classique.png" class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3" alt="Communes anormales détectées, méthode classique" onclick="openLightbox(this)">
+        <img src="/site-jekyll/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique.png" alt="Dépenses communes : normales vs anomalies, méthode classique" role="group" aria-roledescription="slide" aria-label="1 sur 3" class="slide" onclick="openLightbox(this)">
+        <img src="/site-jekyll/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique,%20log%20transform%C3%A9.png" class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3" alt="Dépenses communes : normales vs anomalies, méthode classique, log-transformé" onclick="openLightbox(this)">
+        <img src="/site-jekyll/assets/img/dataminingcommunes/Communes%20anormales%20d%C3%A9tect%C3%A9es,%20m%C3%A9thode%20classique.png" class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3" alt="Communes anormales détectées, méthode classique" onclick="openLightbox(this)">
       </div>
 
       <button class="next" aria-label="Image suivante">&#10095;</button>
 
       <div class="thumbnails">
         <button class="thumb active" data-index="0" aria-label="Aller à l'image 1 sur 3">
-          <img src="/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique.png" alt="">
+          <img src="/site-jekyll/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique.png" alt="">
         </button>
         <button class="thumb" data-index="1" aria-label="Aller à l'image 2 sur 3">
-          <img src="/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique,%20log%20transform%C3%A9.png" alt="">
+          <img src="/site-jekyll/assets/img/dataminingcommunes/D%C3%A9penses%20communes%20:%20normales%20vs%20anomalies%20(z-score%20%3E%203),%20m%C3%A9thode%20classique,%20log%20transform%C3%A9.png" alt="">
         </button>
         <button class="thumb" data-index="2" aria-label="Aller à l'image 3 sur 3">
-          <img src="/assets/img/dataminingcommunes/Communes%20anormales%20d%C3%A9tect%C3%A9es,%20m%C3%A9thode%20classique.png" alt="">
+          <img src="/site-jekyll/assets/img/dataminingcommunes/Communes%20anormales%20d%C3%A9tect%C3%A9es,%20m%C3%A9thode%20classique.png" alt="">
         </button>
       </div>
     </div>
@@ -312,17 +313,17 @@
 
     <!-- Email -->
     <a href="mailto:salomerabec@aliceadsl.fr">
-      <img src="/assets/img/mail.svg" alt="Email" id="mail">
+      <img src="/site-jekyll/assets/img/mail.svg" alt="Email" id="mail">
     </a>
 
     <!-- LinkedIn (externe) -->
     <a href="https://www.linkedin.com/in/salomerabec/" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/link.svg" alt="Lien LinkedIn" id="link">
+      <img src="/site-jekyll/assets/img/link.svg" alt="Lien LinkedIn" id="link">
     </a>
 
     <!-- GitHub (externe) -->
     <a href="https://github.com/salomerabec" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/git.svg" alt="Lien GitHub" id="git">
+      <img src="/site-jekyll/assets/img/git.svg" alt="Lien GitHub" id="git">
     </a>
 
   </div>

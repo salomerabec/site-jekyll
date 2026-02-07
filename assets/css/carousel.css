@@ -78,8 +78,6 @@
   cursor: pointer;
   box-sizing: border-box;
   scroll-snap-align: start;
-  
-  
 }
 
 /* === Image à l'intérieur du bouton === */
@@ -88,8 +86,6 @@
   height: 100%;
   object-fit: cover;
   display: block; /* supprime l'espace blanc sous img */
-  
-  
 }
 
 /* === État actif === */

@@ -11,30 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- CSS global -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/carousel.css">
-  <link rel="stylesheet" href="/assets/css/article.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <link rel="stylesheet" href="/assets/css/contact.css">
-  <link rel="stylesheet" href="/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/style.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/carousel.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/article.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/index.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contact.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/amenagements.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/projet.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/nav.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/modenuit.css"> 
+  <link rel="stylesheet" href="/site-jekyll/assets/css/lightbox.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/footer.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/contactbaspage.css">
 
 
   <!-- JS global -->
-  <script src="/assets/js/nuit.js"></script>
-  <script src="/assets/js/script.js"></script>
-  <script src="/assets/js/nav.js"></script>
-  <script src="/assets/js/navtel.js"></script>
-  <script src="/assets/js/recherche.js"></script>
-  <script src="/assets/js/carousel.js"></script>
-  <script src="/assets/js/lightbox.js"></script>
-  <script src="/assets/js/contact.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="/site-jekyll/assets/js/nuit.js"></script>
+  <script src="/site-jekyll/assets/js/script.js"></script>
+  <script src="/site-jekyll/assets/js/nav.js"></script>
+  <script src="/site-jekyll/assets/js/navtel.js"></script>
+  <script src="/site-jekyll/assets/js/recherche.js"></script>
+  <script src="/site-jekyll/assets/js/carousel.js"></script>
+  <script src="/site-jekyll/assets/js/lightbox.js"></script>
+  <script src="/site-jekyll/assets/js/contact.js"></script>
+  <script src="/site-jekyll/assets/js/index.js"></script>
 
 
   <!-- Favicons -->
-  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" href="/site-jekyll/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="/site-jekyll/assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/site-jekyll/assets/img/favicon.svg">
 </head>
 
 <body>
@@ -43,37 +49,28 @@
 <header class="mobile-header">
   <button id="menu-btn" aria-label="Ouvrir le menu">☰</button>
   <span class="logo">Menu</span>
-
-  <button id="modeNuitButton">
-    <!-- Lune pour desktop et mobile -->
-    <img src="/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
-    <img src="/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
-
-    <!-- Soleil unique -->
-    <img src="/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
-  </button>
 </header>
 
 <!-- MENU MOBILE -->
 <nav id="mobile-menu" aria-hidden="true">
   <ul>
-    <li><a href="/index.html">Mon parcours</a></li>
+    <li><a href="/site-jekyll/index.html">Mon parcours</a></li>
 
     <li class="menu-title">► Projets</li>
-    <li><a href="/posts/site.html">Création du site</a></li>
-    <li><a href="/posts/accessibilite.html">Accessibilité</a></li>
-    <li><a href="/posts/renneslogements.html">Étude logements</a></li>
-    <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-    <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+    <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+    <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité</a></li>
+    <li><a href="/site-jekyll/posts/renneslogements.html">Étude logements</a></li>
+    <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+    <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     <li class="menu-divider"></li>
 
     <li class="menu-title">► Passions</li>
-    <li><a href="/patisserie.html">Pâtisserie</a></li>
-    <li><a href="/jardin.html">Jardinage</a></li>
+    <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+    <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     <li class="menu-divider"></li>
 
-    <li><a href="/amenagements.html">Aménagements</a></li>
-    <li><a href="/contact.html">Contacts</a></li>
+    <li><a href="/site-jekyll/amenagements.html">Aménagements</a></li>
+    <li><a href="/site-jekyll/contact.html">Contacts</a></li>
   </ul>
 </nav>
 
@@ -81,7 +78,7 @@
 
 <!-- MENU PC -->
 <nav>
-  <a href="/index.html">Mon parcours</a>
+  <a href="/site-jekyll/index.html">Mon parcours</a>
 
   <div class="dropdown">
     <button class="dropbtn" id="btn-projets"
@@ -92,11 +89,11 @@
     </button>
 
     <ul class="dropdown-content" id="menu-projets" hidden>
-      <li><a href="/posts/site.html">Création du site</a></li>
-      <li><a href="/posts/accessibilite.html">Accessibilité du site</a></li>
-      <li><a href="/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
-      <li><a href="/posts/jishotoanki.html">Jisho to Anki</a></li>
-      <li><a style="text-decoration: underline;" href="/projet.html">Voir tout</a></li>
+      <li><a href="/site-jekyll/posts/site.html">Création du site</a></li>
+      <li><a href="/site-jekyll/posts/accessibilite.html">Accessibilité du site</a></li>
+      <li><a href="/site-jekyll/posts/renneslogements.html">Étude : Dynamique logements-population à Rennes</a></li>
+      <li><a href="/site-jekyll/posts/jishotoanki.html">Jisho to Anki</a></li>
+      <li><a style="text-decoration: underline;" href="/site-jekyll/projet.html">Voir tout</a></li>
     </ul>
   </div>
 
@@ -110,19 +107,23 @@
     </button>
 
     <ul class="dropdown-content" id="menu-passions" hidden>
-      <li><a href="/patisserie.html">Pâtisserie</a></li>
-      <li><a href="/jardin.html">Jardinage</a></li>
+      <li><a href="/site-jekyll/patisserie.html">Pâtisserie</a></li>
+      <li><a href="/site-jekyll/jardin.html">Jardinage</a></li>
     </ul>
   </div>
 
-  <a href="/amenagements.html">Aménagements</a>
-  <a href="/contact.html">Contacts</a>
+  <a href="/site-jekyll/amenagements.html">Aménagements</a>
+  <a href="/site-jekyll/contact.html">Contacts</a>
+
+</nav>
 
   <!-- BOUTON MODE NUIT -->
-  <button id="modeNuitButton">
-    <img src="/assets/img/moon.svg" alt="Bouton mode nuit" id="luneIcon">
-  </button>
-</nav>
+
+<button id="modeNuitButton">
+  <img src="/site-jekyll/assets/img/moon.svg" alt="Mode nuit" id="luneIconDesktop">
+  <img src="/site-jekyll/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
+  <img src="/site-jekyll/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
+</button>
 
 
   <main>
@@ -141,7 +142,7 @@
 
   <div class="photos">
     <img
-      src="/assets/img/patisserie/1.jpg"
+      src="/site-jekyll/assets/img/patisserie/1.jpg"
       alt="Photo d'une Tarte aux fraises"
       onclick="openLightbox(this)"
       role="button"
@@ -149,7 +150,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/2.jpg"
+      src="/site-jekyll/assets/img/patisserie/2.jpg"
       alt="Photo d'une Tarte à la rhubarbe"
       onclick="openLightbox(this)"
       role="button"
@@ -157,7 +158,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/3.jpg"
+      src="/site-jekyll/assets/img/patisserie/3.jpg"
       alt="Photo d'un gâteau breton"
       onclick="openLightbox(this)"
       role="button"
@@ -165,7 +166,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/4.jpg"
+      src="/site-jekyll/assets/img/patisserie/4.jpg"
       alt="Photo d'un gâteau de Noël italien"
       onclick="openLightbox(this)"
       role="button"
@@ -173,7 +174,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/5.jpg"
+      src="/site-jekyll/assets/img/patisserie/5.jpg"
       alt="Photo d'un cheesecake décoré de coeurs"
       onclick="openLightbox(this)"
       role="button"
@@ -181,7 +182,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/7.png"
+      src="/site-jekyll/assets/img/patisserie/7.png"
       alt="Photo d'un gâteau de riz"
       onclick="openLightbox(this)"
       role="button"
@@ -189,7 +190,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/8.jpg"
+      src="/site-jekyll/assets/img/patisserie/8.jpg"
       alt="Photo de biscuits divers"
       onclick="openLightbox(this)"
       role="button"
@@ -197,7 +198,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/9.jpg"
+      src="/site-jekyll/assets/img/patisserie/9.jpg"
       alt="Photo d'une tarte à la mûre"
       onclick="openLightbox(this)"
       role="button"
@@ -205,7 +206,7 @@
       onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)"
     />
     <img
-      src="/assets/img/patisserie/6.png"
+      src="/site-jekyll/assets/img/patisserie/6.png"
       alt="Photo de pots de confiture de mûre"
       onclick="openLightbox(this)"
       role="button"
@@ -316,17 +317,17 @@
 
     <!-- Email -->
     <a href="mailto:salomerabec@aliceadsl.fr">
-      <img src="/assets/img/mail.svg" alt="Email" id="mail">
+      <img src="/site-jekyll/assets/img/mail.svg" alt="Email" id="mail">
     </a>
 
     <!-- LinkedIn (externe) -->
     <a href="https://www.linkedin.com/in/salomerabec/" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/link.svg" alt="Lien LinkedIn" id="link">
+      <img src="/site-jekyll/assets/img/link.svg" alt="Lien LinkedIn" id="link">
     </a>
 
     <!-- GitHub (externe) -->
     <a href="https://github.com/salomerabec" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/img/git.svg" alt="Lien GitHub" id="git">
+      <img src="/site-jekyll/assets/img/git.svg" alt="Lien GitHub" id="git">
     </a>
 
   </div>

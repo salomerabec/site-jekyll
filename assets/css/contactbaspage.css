@@ -1,0 +1,38 @@
+/*SECTION CONTACT BAS DE PAGE*/
+
+.contact {
+  background-color: #ffd04e75;
+}
+.contact.nuit {
+  background-color: #000d2b;
+  color: white;
+}
+
+/* Appliquer le mode nuit quand le body a la classe 'nuit' */
+body.nuit .contact {
+  background-color: #000d2b;
+  color: white;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.contact-links a:hover {
+  transform: scale(1.1);
+}
+
+.contact-links img {
+  width: 40px;
+  height: 40px;
+}

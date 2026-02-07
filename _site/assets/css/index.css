@@ -102,6 +102,15 @@ h1 {
   background-color: #6171bb;
 }
 
+/* Appliquer le style quand le mode nuit est activé sur le <body> */
+body.nuit .cv-button {
+  background-color: #273672;
+  color: white;
+}
+body.nuit .cv-button:hover {
+  background-color: #6171bb;
+}
+
 .description {
   display: flex;
   align-items: center;

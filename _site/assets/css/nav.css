@@ -1,0 +1,276 @@
+/* BARRE DE MENU NAV */
+
+nav {
+  background-color: #333;
+  padding: 0.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: sticky;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+  font-size: 18px;
+}
+
+nav a:hover,
+nav button.dropbtn:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Liste déroulante cachée par défaut */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 160px;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content[hidden] {
+  display: none;
+}
+
+/* bouton visuel identique aux liens du menu */
+nav button.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.dropdown-content li {
+  text-align: left;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover,
+.dropdown-content li a:focus {
+  background-color: #f0f0f0;
+}
+
+/* Affiche uniquement le menu déroulant de la dropdown survolée ou focus */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* --- Adaptation mobile --- */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column; /* empile les liens verticalement */
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .dropdown-content {
+    position: static; /* pour éviter les débordements */
+    box-shadow: none;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+
+
+
+
+
+@media (min-width: 769px) {
+  .mobile-header,
+  #mobile-menu,
+  #overlay {
+    display: none !important;
+  }
+
+  nav:not(#mobile-menu) {
+    display: flex;
+  }
+}
+
+
+/* Titre dans le menu mobile, non cliquable */
+#mobile-menu .menu-title {
+  padding: 14px 20px;
+  color: white;
+  font-weight: normal; /* même style que les autres liens */
+  cursor: default; /* pas de curseur pointer */
+}
+
+/* Supprime l’effet hover */
+#mobile-menu .menu-title:hover {
+  background: none;
+}
+
+/* Espaces entre les sections dans le menu nav */
+
+#mobile-menu .menu-divider {
+  height: 1px;
+  margin: 10px 0;
+  background: #444; /* couleur gris foncé */
+  list-style: none;
+  pointer-events: none; /* pas cliquable */
+}
+
+
+
+
+
+
+
+
+/* =====================
+   MENU MOBILE
+===================== */
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+
+  /* Cache le nav desktop */
+  nav:not(#mobile-menu) {
+    display: none;
+  }
+
+  /* Bandeau mobile */
+  .mobile-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: #111;
+    color: white;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 2000;
+  }
+
+  .mobile-header .logo {
+    margin-left: 16px;
+    font-weight: bold;
+  }
+
+  #menu-btn {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Menu coulissant avec animation */
+  #mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100%;
+    background: #1a1a1a;
+    padding-top: 70px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 2001;
+  }
+
+  #mobile-menu.open {
+    transform: translateX(300px);
+  }
+
+  #mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mobile-menu li {
+    border-bottom: 1px solid #333;
+  }
+
+  #mobile-menu a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  #mobile-menu a:hover {
+    background: #333;
+  }
+
+  .menu-section {
+    padding: 12px 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  /* Overlay sombre */
+  #overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 2000;
+  }
+
+  #overlay.show {
+    display: block;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+}
+
+/* bouton mode nuit */
+#modeNuitButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+#modeNuitButton img {
+  height: 24px;
+  width: 24px;
+}
+

@@ -1,18 +1,18 @@
-(function () {
-
+// Initialise le script uniquement après que le DOM soit prêt
+document.addEventListener('DOMContentLoaded', function () {
   var searchBar = document.getElementById("searchBar");
   var filterTags = document.getElementById("filterTags");
   var grid = document.getElementById("projectsGrid");
   var noResults = document.getElementById("noResults");
-  var projects = Array.prototype.slice.call(grid.getElementsByClassName("project"));
+  var projects = [];
 
   function normalize(str) {
-    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return (str || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
   function filterProjects() {
-    var rawQuery = searchBar.value || "";
-    var rawTag = filterTags.value || "all";
+    var rawQuery = (searchBar && searchBar.value) || "";
+    var rawTag = (filterTags && filterTags.value) || "all";
 
     var query = normalize(rawQuery.trim());
     var tag = normalize(rawTag);
@@ -35,11 +35,18 @@
     });
 
     // Affichage ou non du message "projets à venir"
-    if (visibleCount === 0) {
-      noResults.style.display = "block";
-    } else {
-      noResults.style.display = "none";
+    if (noResults) {
+      if (visibleCount === 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
     }
+  }
+
+  // Récupère les éléments seulement si le conteneur existe
+  if (grid) {
+    projects = Array.prototype.slice.call(grid.getElementsByClassName("project"));
   }
 
   var timer = null;
@@ -48,9 +55,9 @@
     timer = setTimeout(filterProjects, 120);
   }
 
-  searchBar.addEventListener("input", debouncedFilter);
-  filterTags.addEventListener("change", filterProjects);
+  if (searchBar) searchBar.addEventListener("input", debouncedFilter);
+  if (filterTags) filterTags.addEventListener("change", filterProjects);
 
-  document.addEventListener("DOMContentLoaded", filterProjects);
-
-})();
+  // Lancer un premier filtrage au chargement du DOM
+  filterProjects();
+});
