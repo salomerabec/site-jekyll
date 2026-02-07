@@ -67,6 +67,8 @@ h1 {
   .profil-text {
     order: 1; /* le texte vient en premier */
   }
+
+
 }
 
 @keyframes slideDown {
@@ -186,6 +188,7 @@ body.nuit .cv-button:hover {
     flex-direction: unset;  
     height: auto;             /* pas de hauteur fixe */
     padding-left: 2vw;        /* moins de padding pour mobile */
+    padding-right: 2vw;
     white-space: normal;      /* texte revient à la ligne normalement */
     text-align: justify;
     text-align-last: left;  

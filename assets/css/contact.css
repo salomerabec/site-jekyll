@@ -176,11 +176,11 @@ h3 {
   .main-container {
     flex-direction: column;   /* empile les sections */
     align-items: stretch;     /* pleine largeur */
-    min-height: auto;     /* ← supprime l’obligation de remplir l’écran */
-    padding: 20px;            /* supprime marges latérales */
+    padding: 0;               /* supprime marges latérales */
     width: 100%;
     transform: none;
     gap: 30px;
+    min-height: auto;
   }
 
   /* Formulaire */
