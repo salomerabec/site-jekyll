@@ -175,6 +175,52 @@ body.nuit .cv-button:hover {
   font-size: 2vh;
 }
 
+
+
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .description {
+    display: block;      /* permet à text-align: justify de marcher */
+    flex-direction: unset;  
+    height: auto;             /* pas de hauteur fixe */
+    padding-left: 2vw;        /* moins de padding pour mobile */
+    white-space: normal;      /* texte revient à la ligne normalement */
+    text-align: justify;
+    text-align-last: left;  
+    width: 100%;  
+  }
+
+  .description p {
+    text-align: justify;
+    text-align-last: left;
+  }
+
+  /* lettrine supprimée sur mobile */
+  .description p:first-child::first-letter,
+  .exemple p:first-child::first-letter {
+    font-size: 1em;   /* taille normale */
+    float: none;      /* plus de lettrine flottante */
+    margin-right: 0;  /* pas de marge spéciale */
+  }
+
+  /* retirer l’indentation progressive du typewriter */
+  .typewriter p:nth-child(1),
+  .typewriter p:nth-child(2),
+  .typewriter p:nth-child(3),
+  .typewriter p:nth-child(4) {
+    margin-left: 0;   /* plus d’indentation */
+  }
+
+  .description p {
+    font-size: 4vw; /* ajuster la taille du texte si nécessaire */
+    margin-bottom: 1em; /* espacement plus compact */
+  }
+}
+
+
+
 /*SECTION CONNAISSANCES AVEC LES BADGES*/
 
 .connaissances {

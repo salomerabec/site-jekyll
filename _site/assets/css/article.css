@@ -20,7 +20,6 @@ h3 {
   }
 }
 
-
 .lang img {
   height: 8vh;
   width: auto;
@@ -137,3 +136,29 @@ button:focus {
    width:100%;
 }
 
+
+/* ===== VERSION MOBILE : ARTICLE PLEINE LARGEUR ===== */
+@media (max-width: 768px) {
+
+  .article {
+    max-width: 100%;
+    width: 100%;
+
+    margin: 0;          /* supprime espace haut / bas / côtés */
+    padding: 16px;      /* léger padding interne pour la lisibilité */
+
+    border-radius: 0;   /* optionnel : effet plein écran */
+    box-shadow: none;   /* optionnel : supprime l’ombre */
+    border: none;       /* optionnel : supprime la bordure */
+
+    min-height: auto;   /* évite les effets bizarres sur mobile */
+  }
+
+  .article p {
+    text-indent: 1em;  /* indentation plus douce sur mobile */
+  }
+
+  .article h2 {
+    margin-top: 0;
+  }
+}
