@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-02-07",
+
+  "person": {
+    "first_name": "Salomé",
+    "first_name_ascii": "Salome",
+    "last_name": "RABEC",
+    "full_name": "Salome RABEC",
+    "full_name_ascii": "Salome RABEC",
+    "nationality": "FR"
+  },
+
+  "education": [
+    {
+      "degree": "Bachelor",
+      "field": "Mathematics",
+      "duration_years": 3,
+      "level": "Bachelor",
+      "status": "completed"
+    },
+    {
+      "degree": "Master (Year 1)",
+      "field": "Computer Science / Mathematics",
+      "specialization": [
+        "Cryptography",
+        "Statistics"
+      ],
+      "level": "Master",
+      "status": "attended"
+    },
+    {
+      "degree": "Bachelor (Year 3)",
+      "field": "Public Administration",
+      "level": "Bachelor",
+      "status": "in_progress"
+    },
+    {
+      "degree": "Scientific Baccalaureate",
+      "field": "Science",
+      "level": "High School",
+      "status": "completed"
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "TOEIC",
+      "score": 980,
+      "max_score": 990,
+      "language": "English"
+    },
+    {
+      "name": "PSC1",
+      "description": "First aid training"
+    },
+    {
+      "name": "Driving License",
+      "category": "B"
+    },
+    {
+      "name": "MOOC",
+      "topic": "GDPR / Data Protection",
+      "status": "completed"
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "French",
+      "level": "native"
+    },
+    {
+      "language": "English",
+      "level": "professional",
+      "certification": "TOEIC 980/990"
+    },
+    {
+      "language": "Japanese",
+      "level": "reading",
+      "estimated_cefr": "N3–N2",
+      "certified": false
+    }
+  ],
+
+  "technical_skills": {
+    "programming_languages": [
+      "Python",
+      "SageMath",
+      "Isabelle/HOL",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "domains": [
+      "Mathematics",
+      "Statistics",
+      "Cryptography",
+      "Formal methods"
+    ]
+  },
+
+  "legal_and_compliance": [
+    "GDPR fundamentals"
+  ],
+
+  "experience_level": "Junior",
+
+  "availability": {
+    "employment_status": "Public sector",
+    "organization": "DGFiP"
+  },
+
+  "links": {
+    "website": "https://salomerabec.github.io/site/index.html",
+    "github": "https://github.com/salomerabec",
+    "cv_pdf": "https://salomerabec.github.io/site/cv.pdf",
+    "mail": "salomerabec@aliceadsl.fr",
+    "LinkedIn": "https://www.linkedin.com/in/salomerabec/"
+  }
+}
