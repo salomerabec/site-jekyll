@@ -83,26 +83,43 @@
     }
   ],
 
-  "technical_skills": {
-    "programming_languages": [
-      "Python",
-      "SageMath",
-      "Isabelle/HOL",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "domains": [
-      "Mathematics",
-      "Statistics",
-      "Cryptography",
-      "Formal methods"
-    ]
-  },
+"technical_skills": {
+  "programming_languages": [
+    "Python",
+    "SageMath",
+    "Isabelle/HOL",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ]
+},
 
-  "legal_and_compliance": [
-    "GDPR fundamentals"
-  ],
+"domain_knowledge": [
+  {
+    "name": "Mathematics"
+  },
+  {
+    "name": "Statistics"
+  },
+  {
+    "name": "Cryptography"
+  },
+  {
+    "name": "Formal methods"
+  },
+  {
+    "name": "Public Administration",
+    "context": "French public sector, regulatory environment, administrative law basics"
+  }
+],
+
+"legal_and_compliance": [
+  {
+    "name": "GDPR",
+    "level": "fundamentals"
+  }
+],
+
 
   "experience_level": "Junior",
 
