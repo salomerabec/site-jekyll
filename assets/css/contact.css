@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+
+
 .main-container {
   display: flex;
   grid-template-columns: 1fr 1fr;
@@ -33,17 +35,16 @@
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   flex-wrap: wrap;
   flex: 1 1 400px; /* prend au moins 400px, mais peut s’adapter */
   max-width: 600px;
 }
 
 .contact-form.nuit {
-  background-color: #00093f;
-  border: 1px solid #ffffff;
+  background-color: #000d2b;;
   border-radius: 5px;
-  /*box-shadow: 0 0 10px white;*/
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .contact-form h2 {
@@ -130,23 +131,26 @@
 }
 
 .additional-content.nuit {
-  background-color: #00093f;
+  background-color: #000d2b;
   color: white;
-  background-color: #00093f;
-  border: 1px solid #ffffff;
   border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* Appliquer le mode nuit quand le body a la classe 'nuit' */
 body.nuit .contact-form {
-  background-color: #00093f;
-  border: 1px solid #ffffff;
+  background-color: #000d2b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   color: white;
 }
 
 body.nuit .form-group button {
   background-color: #273672;
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 body.nuit .form-group button:hover {
@@ -154,9 +158,10 @@ body.nuit .form-group button:hover {
 }
 
 body.nuit .additional-content {
-  background-color: #00093f;
+  background-color: #000d2b;
   color: white;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);  
 }
 
 h3 {

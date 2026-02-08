@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Merriweather", serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -35,7 +35,7 @@ body.nuit :focus {
 
 body.nuit {
   background-color: #000d2b;
-  color: white;
+  color: #E6E8EF;
 }
 
 

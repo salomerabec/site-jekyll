@@ -70,8 +70,9 @@ color: #ffffff;
 /* Appliquer le mode nuit quand le body a la classe 'nuit' */
 body.nuit .project {
   background-color: #000e2c;
-  border: 1px solid #ddd;
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 body.nuit .projets {
