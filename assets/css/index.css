@@ -20,6 +20,13 @@
 h1 {
   font-size: 4vh;
 }
+
+body.nuit #profil h1 {
+  color: #8B9CFF;
+}
+
+
+
 .profil h2 {
   font-size: 3vh;
 }
@@ -145,6 +152,11 @@ body.nuit .cv-button:hover {
   line-height: 1;
   margin-right: 0.1em;
 }
+
+body.nuit .description p:first-child::first-letter {
+  color: #8B9CFF;
+}
+
 
 .exemple p:first-child::first-letter {
   font-size: 6vh;

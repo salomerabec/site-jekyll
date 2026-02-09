@@ -30,7 +30,7 @@ body :focus {
 }
 
 body.nuit :focus {
-  outline: 3px solid #81bd93;
+  outline: 3px solid #8B9CFF;
 }
 
 body.nuit {
@@ -39,3 +39,10 @@ body.nuit {
 }
 
 
+body.nuit a:not(nav a) {
+  color:#8B9CFF;
+}
+
+body.nuit section#projets h3 {
+  color: #8B9CFF;
+}
