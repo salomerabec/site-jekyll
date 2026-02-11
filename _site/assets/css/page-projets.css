@@ -1,0 +1,217 @@
+.page-projets {
+  background-color: white;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style du champ de recherche et du menu déroulant */
+#searchBar, #filterTags {
+flex: 1;
+max-width: 1000px;
+padding: 10px;
+margin: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 par ligne */
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px; /* limite propre */
+  flex: 1;
+}
+
+
+
+
+h3 {
+    margin-bottom: 4vh; /* espace sous le titre */
+    text-align: center;
+}
+
+
+
+/*CARTES*/
+
+.project-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem 1.6rem 0.5rem 1.6rem; /* top right bottom left */
+  cursor: pointer;
+  overflow: hidden;
+  text-align: justify;
+  padding-bottom: 60px; /* réserve l’espace pour les tags */
+  
+  /* Ensure consistent sizing in the flex grid */
+  box-sizing: border-box;
+  /* fixed card size to match legacy .project rules */
+  flex: 0 0 250px;
+  height: 300px;
+  /* layout: stack content vertically so meta can stick to bottom */
+  display: flex;
+  flex-direction: column;
+  /* Bordure mopderne */
+  border: 1px solid rgba(158, 214, 151, 0.35);
+
+  /* Ombre clean */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Hover global */
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #9ed697;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12),
+    0 0 0 4px rgba(158, 214, 151, 0.12);
+}
+
+/* Titre */
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+  
+}
+
+.project-card:hover .project-title {
+  color: #7fcf86;
+}
+
+/* Description */
+.project-description {
+  color: #4b5563;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  /* take remaining vertical space so .project-meta sits at the bottom */
+  flex: 1 1 auto;
+}
+
+.project-card:hover .project-description {
+  color: #1f2937;
+}
+
+/* Meta */
+.project-meta {
+  position: absolute;
+  bottom: 15px;   /* distance précise de la bordure */
+  left: 1.6rem;
+  right: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Tag */
+.project-tag {
+  background: rgba(158, 214, 151, 0.15);
+  color: #4b9b59;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+body.nuit .project-tag {
+  color: #8B9CFF;
+  background: #8b9cff1a;
+}
+
+/* Carte cliquable */
+.project-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  text-indent: -9999px;
+}
+
+
+/*CARTES MODE NUIT*/
+
+
+body.nuit .project-card {
+  /* keep flex layout in night mode too */
+  display: flex;
+  flex-direction: column;
+  background-color: #000e2c;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.nuit .project-card .project-description, body.nuit .project-card  .project-meta time {
+color: #E6E8EF;
+}
+
+/* Hover identique */
+body.nuit .project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+
+
+.page-projets.nuit{
+background-color: #000d2b;
+color: #ffffff;
+}
+
+.page-projets.nuit h2 {
+color: #ffffff;
+}
+
+
+body.nuit .page-projets {
+  background-color: #000d2b;
+  color: #ffffff;
+}
+
+body.nuit .page-projets h2 {
+  color: #ffffff;
+}
+
+body.nuit section#page-projets h3 {
+  color: #8B9CFF;
+}
+
+/*GRID SUR MOBILE*/
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}

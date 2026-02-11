@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Récupère les éléments seulement si le conteneur existe
   if (grid) {
-    projects = Array.prototype.slice.call(grid.getElementsByClassName("project"));
+    // support both old `.project` and new `.project-card` class names
+    projects = Array.prototype.slice.call(grid.querySelectorAll('.project, .project-card'));
   }
 
   var timer = null;

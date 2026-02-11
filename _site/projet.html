@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/site-jekyll/assets/css/carousel.css">
   <link rel="stylesheet" href="/site-jekyll/assets/css/article.css">
   <link rel="stylesheet" href="/site-jekyll/assets/css/index.css">
-  <link rel="stylesheet" href="/site-jekyll/assets/css/projet.css">
+  <link rel="stylesheet" href="/site-jekyll/assets/css/page-projets.css">
   <link rel="stylesheet" href="/site-jekyll/assets/css/nav.css"> 
   <link rel="stylesheet" href="/site-jekyll/assets/css/modenuit.css"> 
   <link rel="stylesheet" href="/site-jekyll/assets/css/lightbox.css">
@@ -130,7 +130,7 @@
 
 
   <main>
-    <section id="projets" class="section projets">
+    <section id="page-projets" class="section page-projets">
 
 <style>
 </style>
@@ -142,6 +142,7 @@
         Mes Projets
     <br><br></h2>
 
+    <div class="search-controls">
     <!-- Barre de recherche -->
     <input type="text" id="searchBar" placeholder="Rechercher un projet..." />
 
@@ -152,42 +153,109 @@
       <option value="Data">Data</option>
       <option value="crypto">Cryptographie</option>
     </select>
+    </div>
 
     <br><br><br>    
     <!-- Grille des projets -->
     <div id="projectsGrid" class="grid">
 
-      <a href="/site-jekyll/posts/site.html" class="project" data-tags="Web" role="button" tabindex="0"
-          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-          <h3>Création de ce site</h3>
-          <p>Premier projet web 🌐</p>
-      </a>
 
-      <a href="/site-jekyll/posts/accessibilite.html" class="project" data-tags="Web Handicap" role="button" tabindex="0"
-          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-          <h3>Accessibilité du site</h3>
-          <p>Projet web basé sur le RGAA ♿️</p>
-      </a>
 
-      <a href="/site-jekyll/posts/jishotoanki.html" class="project" data-tags="Web" role="button" tabindex="0"
-          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-          <h3>Jisho to Anki</h3>
-          <p>Une extension Firefox de dictionnaire 🇯🇵</p>
-      </a>
 
-      <a href="/site-jekyll/posts/renneslogements.html" class="project" data-tags="Data" role="button" tabindex="0"
-          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-          <h3>Étude statistique 📊</h3>
-          <p>Dynamique logements-population à Rennes</p>
-      </a>
 
-      <a href="/site-jekyll/posts/anomaliesdepensescommunes.html" class="project" data-tags="Data" role="button" tabindex="0"
-          onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
-          <h3>Data Mining 🗂️ ⚒️</h3>
-          <p>Détection d'anomalies comptables des communes</p>
-      </a>
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Création de ce site</h3>
 
-    </div>
+  <p class="project-description">
+    Premier projet web 🌐<br>
+    Retour d’expérience sur la création de mon site-CV : choix techniques, problèmes rencontrés (accessibilité, mode nuit, responsive, performance) et leçons apprises en partant de zéro.
+  </p>
+
+  <a href="/site-jekyll/posts/site.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Accessibilité du site</h3>
+
+  <p class="project-description">
+    Conception d’un site inclusif respectant le RGAA, alliant structure HTML, formulaires ARIA et navigation clavier ♿️
+  </p>
+
+  <a href="/site-jekyll/posts/accessibilite.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Jisho to Anki</h3>
+
+  <p class="project-description">
+    Prototype d’extension Firefox développé en HTML, CSS et JavaScript, connecté à l’API Jisho et à AnkiConnect, permettant d’afficher la définition de mots japonais au survol et de générer automatiquement des cartes de révision personnalisées. 🇯🇵
+  </p>
+
+  <a href="/site-jekyll/posts/jishotoanki.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Dynamique logements-population à Rennes </h3>
+
+  <p class="project-description">
+    Analyse de données urbaines à Rennes : modélisation de la population et du parc de logements avec Python pour dégager tendances et observations 📊
+  </p>
+
+  <a href="/site-jekyll/posts/renneslogements.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Data Mining</h3>
+
+  <p class="project-description">
+    Projet de data mining sur les dépenses publiques françaises : détection d’anomalies avec Python pour identifier tendances et anomalies structurelles dans les communes. 🗂️ ⚒️
+  </p>
+
+  <a href="/site-jekyll/posts/renneslogements.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+</div>
 
     <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
       <br><br>
