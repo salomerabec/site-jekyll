@@ -1,8 +1,17 @@
 /*SECTION PROJETS BAS DE PAGE*/
 
 .projets {
-  background-color: #9ed697;
+  background: linear-gradient(
+    to bottom,
+    #f8fafc 0%,
+    #f1f5f9 40%,
+    #eef5f1 100%
+  );
   flex-grow: 1;
+}
+
+body.nuit .projets {
+  background:#000d2b;
 }
 
 .project {
@@ -17,7 +26,8 @@
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
-  
+   background-color: #ffffff;
+  border: 1px solid #f1f5f9;
   
 }
 
@@ -25,18 +35,62 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-decoration: none; /* reste propre au survol */
 transform: scale(1.05);
+ background-color: #f9fdfb;
 }
 
 /* Style du champ de recherche et du menu déroulant */
-#searchBar, #filterTags {
-width: 100%;
-max-width: 300px;
-padding: 10px;
-margin: 10px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-radius: 5px;
+
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0 60px 0;
 }
+
+/* Style moderne input + select */
+#searchBar,
+#filterTags {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 20px;
+  font-size: 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background-color: #ffffff;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Placeholder plus doux */
+#searchBar::placeholder {
+  color: #94a3b8;
+}
+
+/* Hover subtil */
+#searchBar:hover,
+#filterTags:hover {
+  border-color: #cbd5e1;
+}
+
+/* Focus moderne (effet premium) */
+#searchBar:focus,
+#filterTags:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+body.nuit #searchBar:focus,
+body.nuit #filterTags:focus {
+  border-color: #8B9CFF;
+  box-shadow: 0 0 0 4px rgba(208, 209, 255, 0.404);
+}
+
+
+/**/
 
 /* Style de la grille des projets */
 .grid {
@@ -83,4 +137,242 @@ body.nuit .projets {
 
 body.nuit .projets h2 {
   color: #ffffff;
+}
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style du champ de recherche et du menu déroulant */
+
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0 60px 0;
+}
+
+/* Style moderne input + select */
+#searchBar,
+#filterTags {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 20px;
+  font-size: 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background-color: #ffffff;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Placeholder plus doux */
+#searchBar::placeholder {
+  color: #94a3b8;
+}
+
+/* Hover subtil */
+#searchBar:hover,
+#filterTags:hover {
+  border-color: #cbd5e1;
+}
+
+/* Focus moderne (effet premium) */
+#searchBar:focus,
+#filterTags:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+
+h3 {
+    margin-bottom: 4vh; /* espace sous le titre */
+    text-align: center;
+}
+
+
+
+/*CARTES*/
+
+.project-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem 1.6rem 0.5rem 1.6rem; /* top right bottom left */
+  cursor: pointer;
+  overflow: hidden;
+  text-align: justify;
+  padding-bottom: 60px; /* réserve l’espace pour les tags */
+  
+  /* Ensure consistent sizing in the flex grid */
+  box-sizing: border-box;
+  /* fixed card size to match legacy .project rules */
+  flex: 0 0 250px;
+  height: 250px;
+  /* layout: stack content vertically so meta can stick to bottom */
+  display: flex;
+  flex-direction: column;
+  /* Bordure mopderne */
+  border: 1px solid rgba(158, 214, 151, 0.35);
+
+  /* Ombre clean */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Hover global */
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #9ed697;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12),
+    0 0 0 4px rgba(158, 214, 151, 0.12);
+}
+
+/* Titre */
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+  
+}
+
+.project-card:hover .project-title {
+  color: #7fcf86;
+}
+
+/* Description */
+.project-description {
+  color: #4b5563;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  /* take remaining vertical space so .project-meta sits at the bottom */
+  flex: 1 1 auto;
+}
+
+.project-card:hover .project-description {
+  color: #1f2937;
+}
+
+/* Meta */
+.project-meta {
+  position: absolute;
+  bottom: 15px;   /* distance précise de la bordure */
+  left: 1.6rem;
+  right: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Tag */
+.project-tag {
+  background: rgba(158, 214, 151, 0.15);
+  color: #4b9b59;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+body.nuit .project-tag {
+  color: #8B9CFF;
+  background: #8b9cff1a;
+}
+
+/* Carte cliquable */
+.project-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  text-indent: -9999px;
+}
+
+
+/*CARTES MODE NUIT*/
+
+
+body.nuit .project-card {
+  /* keep flex layout in night mode too */
+  display: flex;
+  flex-direction: column;
+  background-color: #000e2c;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.nuit .project-card .project-description, body.nuit .project-card  .project-meta time {
+color: #E6E8EF;
+}
+
+/* Hover identique */
+body.nuit .project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+
+
+.page-projets.nuit{
+background-color: #000d2b;
+color: #ffffff;
+}
+
+.page-projets.nuit h2 {
+color: #ffffff;
+}
+
+
+body.nuit .page-projets {
+  background-color: #000d2b;
+  color: #ffffff;
+}
+
+body.nuit .page-projets h2 {
+  color: #ffffff;
+}
+
+body.nuit section#page-projets h3 {
+  color: #8B9CFF;
+}
+
+/*GRID SUR MOBILE*/
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
+  }
+
+  .project-card {
+    width: 100%;
+  }
 }

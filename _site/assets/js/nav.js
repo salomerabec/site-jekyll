@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const openMenu = () => {
     btn.setAttribute('aria-expanded', 'true');
     menu.hidden = false;
-    // optionnel : focus sur 1er lien
     menu.querySelector('a')?.focus();
   };
   const closeMenu = () => {
@@ -19,16 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     else openMenu();
   };
 
-  // clic souris
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     toggleMenu();
   });
 
-  // clavier : Entrée, Espace, FlecheBas, Echap
   btn.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.code === 'Space') {
-      e.preventDefault(); // évite le scroll
+      e.preventDefault();
       toggleMenu();
     } else if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -39,29 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // fermer si clic en dehors
   document.addEventListener('click', (e) => {
     if (!btn.contains(e.target) && !menu.contains(e.target)) closeMenu();
   });
 
-// Fermer si clic en dehors du menu
-document.addEventListener('click', (e) => {
-  if (!btn.contains(e.target) && !menu.contains(e.target)) {
-    closeMenu();
+  // Ajout classe active sur nav
+  const navLinks = document.querySelectorAll('nav a');
+  const currentPath = window.location.pathname;
+  navLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Effet scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+  if (!nav) return;
+  if (window.scrollY > 50) {
+    nav.style.height = "60px";
+  } else {
+    nav.style.height = "70px";
   }
 });
 
-
+// Focus au load
 window.addEventListener("load", () => {
-  // Enlève tout focus automatique au démarrage
-  if (document.activeElement) {
-    document.activeElement.blur();
-  }
-}
-
-  // Optionnel : empêche le focus visuel sur le bouton au tout début
+  if (document.activeElement) document.activeElement.blur();
   const btn = document.getElementById("btn-passions");
-  if (btn) {
-    btn.blur();
-  }
+  if (btn) btn.blur();
 });

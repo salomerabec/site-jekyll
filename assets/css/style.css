@@ -46,3 +46,105 @@ body.nuit a:not(nav a) {
 body.nuit section#projets h3 {
   color: #8B9CFF;
 }
+
+
+
+
+
+
+
+
+
+/*COULEURS*/
+
+
+:root {
+
+  --color-body-jour-1:#f8fbf8 0%;
+  --color-body-jour-2:#f4faf5 100%;
+
+  --body-jour: linear-gradient(
+    135deg,
+    var(--color-body-jour-1),
+    var(--color-body-jour-2)
+  );
+
+
+  --color-nuit-1: #8B9CFF;
+  --color-nuit-text:#E6E8EF;
+  --color-nuit-background:#000d2b;
+
+
+    /*BOUTON EFFET GLASS*/
+
+    /*MODE JOUR*/
+
+  --color-btn-jour-1: #9ed697;
+  --color-btn-jour-2: #b8e6b2;
+  --color-btn-jour-glass: rgba(255,255,255,0.6);
+  --btn-shadow-jour: rgba(158, 214, 151, 0.3);
+
+  --btn-jour: linear-gradient(
+    135deg,
+    var(--color-btn-jour-1),
+    var(--color-btn-jour-2)
+  );
+
+  --btn-jour-glass: linear-gradient(
+    120deg,
+    transparent,
+    var(--color-btn-jour-glass),
+    transparent
+  );
+
+  /*MODE NUIT*/
+
+  --color-btn-nuit-1: #1e293b;
+  --color-btn-nuit-text: #a5b4fc;
+  --color-btn-nuit-border: #6366f1;
+  --color-btn-nuit-glass: #7c83ff;
+
+  --btn-shadow-nuit: rgba(99,102,241,0.3);
+
+
+  --btn-nuit: linear-gradient(
+  135deg,
+  var(--color-btn-nuit-border),
+  var(--color-btn-nuit-glass)
+  );
+
+}
+
+
+
+
+
+
+
+
+
+
+body.nuit .btn-contact {
+  background: #1e293b;
+  color: #a5b4fc;
+  border: 1px solid #6366f1;
+  box-shadow: 0 0 20px rgba(99,102,241,0.3);
+}
+
+body.nuit .btn-contact:hover {
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #7c83ff
+  );
+  color: white;
+}
+
+.form-group button.nuit {
+  background-color: #273672;
+  color: white;
+}
+.form-group button.nuit:hover {
+  background-color: #6171bb;
+}
+

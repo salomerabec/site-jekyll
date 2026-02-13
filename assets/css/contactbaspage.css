@@ -1,11 +1,36 @@
 /*SECTION CONTACT BAS DE PAGE*/
 
 .contact {
-  background-color: #ffd04e75;
+  padding: 100px 20px;
+  background: linear-gradient(
+  180deg,
+  #f8fafc 0%,
+  #eef5f1 50%,
+  #e6f4ea 100%
+);
+
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.contact.nuit {
-  background-color: #000d2b;
-  color: white;
+
+body.nuit .contact {
+  background:#000d2b;
+}
+
+
+.contact::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #22c55e;
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+body.nuit .contact::after {
+  background-color: #8B9CFF;
+
 }
 
 /* Appliquer le mode nuit quand le body a la classe 'nuit' */
@@ -14,25 +39,94 @@ body.nuit .contact {
   color: white;
 }
 
+/* Titre */
+.contact h2 {
+  background: linear-gradient(90deg, #22c55e, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+body.nuit .contact h2 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #8B9CFF;
+}
+
+
+/* Texte */
+.contact p {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+body.nuit .contact p {
+  color: #cbd5e1;
+}
+
+
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 35px;
   align-items: center;
-  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
+
+/* Icônes */
+.contact-links img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+
+
+
+/* Style des liens (cercle moderne) */
 .contact-links a {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
   text-decoration: none;
-  transition: transform 0.3s;
-  display: inline-block;
 }
 
+/* Mode nuit pour les cercles */
+body.nuit .contact-links a {
+  background-color: #001b45;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover moderne */
 .contact-links a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+}
+
+/* Légère animation icône */
+.contact-links a:hover img {
   transform: scale(1.1);
 }
 
-.contact-links img {
-  width: 40px;
-  height: 40px;
+/* Hover vert en mode clair */
+.contact-links a:hover {
+  background-color: #22c55e;
+}
+
+/* Icônes blanches au hover */
+.contact-links a:hover img {
+  filter: brightness(0) invert(1);
 }

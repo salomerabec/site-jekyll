@@ -1,9 +1,5 @@
 
-
   <section id="projets" class="section projets">
-
-
-
 
     <h2><br><br>
       Mes Projets
@@ -22,42 +18,93 @@
       <option value="crypto">Cryptographie</option>
     </select>
 
-            <!-- Grille des projets -->
-                   <div id="projectsGrid" class="grid">
+<!-- Grille des projets -->
+<div id="projectsGrid" class="grid">
 
-<a href="{{ '/posts/site.html' | relative_url }}" class="project" data-tags="Web" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 
-  <h3>Création de ce site</h3>
-  <p>Premier projet web 🌐</p>
 
-</a>
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Création de ce site</h3>
 
-<a href="{{ '/posts/accessibilite.html' | relative_url }}" class="project" data-tags="Web Handicap" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <p class="project-description">
+    Premier projet web 🌐</p>
 
-  <h3>Accessibilité du site</h3>
-  <p>Projet web basé sur le RGAA ♿️</p>
+  <a href="{{ '/posts/site.html' | relative_url }}" class="project-link">
+    Lire la suite →
+  </a>
 
-</a>
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
 
-<a href="{{ '/posts/jishotoanki.html' | relative_url }}" class="project" data-tags="Web" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 
-  <h3>Jisho to Anki</h3>
-  <p>Une extension Firefox de dictionnaire 🇯🇵</p>
 
-</a>
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Accessibilité du site</h3>
 
-<a href="{{ '/posts/renneslogements.html' | relative_url }}" class="project" data-tags="Data" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <p class="project-description">
+    Conception d’un site basé sur le RGAA ♿️
+  </p>
 
-  <h3>Étude statistique 📊</h3>
-  <p>Dynamique logements-population à Rennes</p>
+  <a href="{{ '/posts/accessibilite.html' | relative_url }}" class="project-link">
+    Lire la suite →
+  </a>
 
-</a>
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
 
-            </div>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Dynamique logements-population à Rennes </h3>
+
+  <p class="project-description">
+    Analyse de données urbaines à Rennes 📊
+  </p>
+
+  <a href="{{ '/posts/renneslogements.html' | relative_url }}" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Data Mining</h3>
+
+  <p class="project-description">
+    Projet de data mining sur les dépenses publiques 🗂️ ⚒️
+  </p>
+
+  <a href="{{ '/posts/renneslogements.html' | relative_url }}" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+
+
+
+
+</div>
+
+
+
+
 
     <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
       <br><br>

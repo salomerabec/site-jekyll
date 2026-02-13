@@ -24,9 +24,9 @@
   <link rel="stylesheet" href="/site-jekyll/assets/css/footer.css">
   <link rel="stylesheet" href="/site-jekyll/assets/css/contactbaspage.css">
 
-
   <!-- JS global -->
   <script src="/site-jekyll/assets/js/nuit.js"></script>
+  <script src="/site-jekyll/assets/js/dropdown.js"></script>
   <script src="/site-jekyll/assets/js/script.js"></script>
   <script src="/site-jekyll/assets/js/nav.js"></script>
   <script src="/site-jekyll/assets/js/navtel.js"></script>
@@ -135,6 +135,7 @@
   <img src="/site-jekyll/assets/img/moon2.svg" alt="Mode nuit" id="luneIconMobile">
   <img src="/site-jekyll/assets/img/sun.svg" alt="Mode jour" id="soleilIcon">
 </button>
+
 
 
   <main>
@@ -293,11 +294,7 @@
   </main>
 
   
-
   <section id="projets" class="section projets">
-
-
-
 
     <h2><br><br>
       Mes Projets
@@ -316,42 +313,93 @@
       <option value="crypto">Cryptographie</option>
     </select>
 
-            <!-- Grille des projets -->
-                   <div id="projectsGrid" class="grid">
+<!-- Grille des projets -->
+<div id="projectsGrid" class="grid">
 
-<a href="/site-jekyll/posts/site.html" class="project" data-tags="Web" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 
-  <h3>Création de ce site</h3>
-  <p>Premier projet web 🌐</p>
 
-</a>
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Création de ce site</h3>
 
-<a href="/site-jekyll/posts/accessibilite.html" class="project" data-tags="Web Handicap" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <p class="project-description">
+    Premier projet web 🌐</p>
 
-  <h3>Accessibilité du site</h3>
-  <p>Projet web basé sur le RGAA ♿️</p>
+  <a href="/site-jekyll/posts/site.html" class="project-link">
+    Lire la suite →
+  </a>
 
-</a>
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
 
-<a href="/site-jekyll/posts/jishotoanki.html" class="project" data-tags="Web" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
 
-  <h3>Jisho to Anki</h3>
-  <p>Une extension Firefox de dictionnaire 🇯🇵</p>
 
-</a>
+  <article class="project-card" data-tags="Web">
+  <h3 class="project-title">Accessibilité du site</h3>
 
-<a href="/site-jekyll/posts/renneslogements.html" class="project" data-tags="Data" role="button" tabindex="0"
-   onkeydown="if(event.key === 'Enter' || event.key === ' ') openLightbox(this)">
+  <p class="project-description">
+    Conception d’un site basé sur le RGAA ♿️
+  </p>
 
-  <h3>Étude statistique 📊</h3>
-  <p>Dynamique logements-population à Rennes</p>
+  <a href="/site-jekyll/posts/accessibilite.html" class="project-link">
+    Lire la suite →
+  </a>
 
-</a>
+  <div class="project-meta">
+    <span class="project-tag">Web</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
 
-            </div>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Dynamique logements-population à Rennes </h3>
+
+  <p class="project-description">
+    Analyse de données urbaines à Rennes 📊
+  </p>
+
+  <a href="/site-jekyll/posts/renneslogements.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+  <article class="project-card" data-tags="Data">
+  <h3 class="project-title">Data Mining</h3>
+
+  <p class="project-description">
+    Projet de data mining sur les dépenses publiques 🗂️ ⚒️
+  </p>
+
+  <a href="/site-jekyll/posts/renneslogements.html" class="project-link">
+    Lire la suite →
+  </a>
+
+  <div class="project-meta">
+    <span class="project-tag">Data</span>
+    <time datetime="2025">2025</time>
+  </div>
+</article>
+
+
+
+
+
+
+</div>
+
+
+
+
 
     <div id="noResults" style="font-style: italic;display:none; margin-top:20px; font-size:20px;">
       <br><br>
@@ -365,7 +413,9 @@
 
 
   <section id="contact" class="section contact">
-  <h2><br><br>Contact<br></h2>
+  <h2>Restons en contact</h2>
+  <p>Une opportunité, un projet, une collaboration ?<br>
+Je suis disponible pour échanger.</p>
   <div class="contact-links">
 
     <!-- Email -->
