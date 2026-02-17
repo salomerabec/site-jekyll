@@ -1,97 +1,5 @@
 /*SECTION PROJETS BAS DE PAGE*/
 
-.projets {
-  background: linear-gradient(
-    to bottom,
-    #f8fafc 0%,
-    #f1f5f9 40%,
-    #eef5f1 100%
-  );
-  flex-grow: 1;
-}
-
-body.nuit .projets {
-  background:#000d2b;
-}
-
-.project {
-  display: block; /* rend le lien cliquable sur tout le bloc */
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  text-decoration: none; /* supprime le soulignement */
-  color: inherit; /* garde la couleur du texte */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 250px;
-  height: 180px;
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-   background-color: #ffffff;
-  border: 1px solid #f1f5f9;
-  
-}
-
-.project:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-decoration: none; /* reste propre au survol */
-transform: scale(1.05);
- background-color: #f9fdfb;
-}
-
-/* Style du champ de recherche et du menu déroulant */
-
-
-.filters-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0 60px 0;
-}
-
-/* Style moderne input + select */
-#searchBar,
-#filterTags {
-  width: 100%;
-  max-width: 280px;
-  padding: 12px 20px;
-  font-size: 15px;
-
-  border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  background-color: #ffffff;
-
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-}
-
-/* Placeholder plus doux */
-#searchBar::placeholder {
-  color: #94a3b8;
-}
-
-/* Hover subtil */
-#searchBar:hover,
-#filterTags:hover {
-  border-color: #cbd5e1;
-}
-
-/* Focus moderne (effet premium) */
-#searchBar:focus,
-#filterTags:focus {
-  outline: none;
-  border-color: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
-}
-body.nuit #searchBar:focus,
-body.nuit #filterTags:focus {
-  border-color: #8B9CFF;
-  box-shadow: 0 0 0 4px rgba(208, 209, 255, 0.404);
-}
-
-
-/**/
-
 /* Style de la grille des projets */
 .grid {
 display: flex;
@@ -101,48 +9,28 @@ justify-content: center;
 margin-top: 20px;
 justify-items: stretch; /* étend les projets uniformément */
 align-items: stretch; 
-
 }
 
-.project.nuit {
-  background-color: #000e2c;
-  border: 1px solid #ddd;
+
+.projets h2{
+  margin: 80px 0 60px 0;
+}
+
+body.nuit .projets h2{
+    color:var(--color-nuit-1);
+}
+
+/*GRID SUR MOBILE*/
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
   }
 
-h3 {
-    margin-bottom: 4vh; /* espace sous le titre */
+  .project-card {
+    width: 100%;
+  }
 }
-
-.projets.nuit{
-background-color: #000d2b;
-color: #ffffff;
-}
-
-.projets.nuit h2 {
-color: #ffffff;
-}
-
-/* Appliquer le mode nuit quand le body a la classe 'nuit' */
-body.nuit .project {
-  background-color: #000e2c;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-body.nuit .projets {
-  background-color: #000d2b;
-  color: #ffffff;
-}
-
-body.nuit .projets h2 {
-  color: #ffffff;
-}
-
-
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
 
 
 .search-controls {
@@ -298,7 +186,7 @@ h3 {
 }
 
 body.nuit .project-tag {
-  color: #8B9CFF;
+  color: var(--color-nuit-1);
   background: #8b9cff1a;
 }
 
@@ -318,7 +206,7 @@ body.nuit .project-card {
   /* keep flex layout in night mode too */
   display: flex;
   flex-direction: column;
-  background-color: #000e2c;
+  background-color: var(--color-nuit-background);
   color: #ffffff;
 
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -343,7 +231,7 @@ body.nuit .project-card:hover {
 
 
 .page-projets.nuit{
-background-color: #000d2b;
+background-color:var(--color-nuit-background);
 color: #ffffff;
 }
 
@@ -353,7 +241,7 @@ color: #ffffff;
 
 
 body.nuit .page-projets {
-  background-color: #000d2b;
+  background-color: var(--color-nuit-background);
   color: #ffffff;
 }
 
@@ -362,17 +250,6 @@ body.nuit .page-projets h2 {
 }
 
 body.nuit section#page-projets h3 {
-  color: #8B9CFF;
+  color: var(--color-nuit-1);
 }
 
-/*GRID SUR MOBILE*/
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr; /* 1 carte par ligne */
-  }
-
-  .project-card {
-    width: 100%;
-  }
-}

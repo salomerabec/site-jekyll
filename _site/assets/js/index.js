@@ -1,51 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".typewriter");
-  const paragraphs = Array.from(container.querySelectorAll("p"));
+// SCROLL ANIMATION
 
-  const cursor = document.createElement("span");
-  cursor.classList.add("cursor");
+document.addEventListener("DOMContentLoaded", function () {
+  const reveals = document.querySelectorAll(".reveal");
 
-  let pIndex = 0;
-
-  function typeParagraph(p, next) {
-    const text = p.textContent;
-    p.textContent = "";
-
-    // on crée un span pour contenir le texte tapé
-    const textSpan = document.createElement("span");
-    p.appendChild(textSpan);
-
-    // on ajoute le curseur juste après le texte
-    p.appendChild(cursor);
-
-    p.style.visibility = "visible";
-
-    let i = 0;
-
-    function typeChar() {
-      if (i < text.length) {
-        textSpan.textContent += text[i];
-        i++;
-        setTimeout(typeChar, 20);
-      } else {
-        setTimeout(next, 300);
-      }
-    }
-
-    typeChar();
-  }
-
-  function typeAll() {
-    if (pIndex < paragraphs.length) {
-      typeParagraph(paragraphs[pIndex], () => {
-        pIndex++;
-        typeAll();
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // animation une seule fois
+        }
       });
-    } else {
-      // Curseur final : on le laisse après le dernier texteSpan
-      paragraphs[paragraphs.length - 1].appendChild(cursor);
+    },
+    {
+      threshold: 0.15
     }
-  }
+  );
 
-  typeAll();
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
 });

@@ -1,10 +1,14 @@
+body{
+  background:  var(--body-jour);
+}
+
 .page-projets {
-  background-color: white;
   min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .search-controls {
   display: flex;

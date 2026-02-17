@@ -37,34 +37,26 @@ h3 {
 }
 
 .article {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column; /* empile le titre au-dessus du texte */
-  align-items: center; /* centre le contenu horizontalement */
-  justify-content: flex-start;
-  min-height: 100vh;
-  max-width: 50vw; /* largeur maximale du texte */
-  margin: 80px auto; /* espace autour et centrage horizontal */
-  padding: 40px 30px; /* espace intérieur (haut/bas + côtés) */
-  text-align: justify; /* centre tout le texte */
-  line-height: 1.8; /* espace entre les lignes */
-  font-size: 1.1em;
-  border-radius: 12px; /* coins arrondis pour un effet doux */
-    border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  max-width: 50vw;
+  margin: 15vh auto 80px auto;
+  padding: 80px 40px;
+  border-radius: 12px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+body.nuit .article{
+  background:var(--color-nuit-background);
 }
 
-.article h2 {
-  margin: 0;
-  margin-bottom: 20px;
+.article h1 {
   font-size: 2em;
   text-align: center;
+  margin: 30px 0 80px 0;
 }
 
 .article p {

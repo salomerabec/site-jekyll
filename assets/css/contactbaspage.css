@@ -2,19 +2,12 @@
 
 .contact {
   padding: 100px 20px;
-  background: linear-gradient(
-  180deg,
-  #f8fafc 0%,
-  #eef5f1 50%,
-  #e6f4ea 100%
-);
-
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.nuit .contact {
-  background:#000d2b;
+  background:var(--color-nuit-background);
 }
 
 
@@ -23,34 +16,29 @@ body.nuit .contact {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #22c55e;
+  background-color: var(--color-btn-jour-1);
   margin: 25px auto 0;
   border-radius: 2px;
 }
 
 body.nuit .contact::after {
-  background-color: #8B9CFF;
+  background-color: var(--color-nuit-1);
 
 }
 
 /* Appliquer le mode nuit quand le body a la classe 'nuit' */
 body.nuit .contact {
-  background-color: #000d2b;
+  background-color: var(--color-nuit-background);
   color: white;
 }
 
-/* Titre */
-.contact h2 {
-  background: linear-gradient(90deg, #22c55e, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 
 body.nuit .contact h2 {
   background: none;
   -webkit-text-fill-color: initial;
-  color: #8B9CFF;
+  color: var(--color-nuit-1);
 }
 
 
@@ -123,7 +111,7 @@ body.nuit .contact-links a {
 
 /* Hover vert en mode clair */
 .contact-links a:hover {
-  background-color: #22c55e;
+  background-color: var(--color-btn-jour-1);
 }
 
 /* Icônes blanches au hover */

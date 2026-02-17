@@ -38,12 +38,7 @@ nav a::after {
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background: linear-gradient(
-    135deg,
-    #9ed697 0%,
-    #b8e6b2 50%,
-    #ffffff 100%
-  );
+  background-color: var(--color-btn-jour-1);
 
   backdrop-filter: blur(8px);
 
@@ -104,7 +99,7 @@ nav a.active::after {
 }
 
 .dropdown-content li a:hover {
-    color:#9ed697;
+    color: var(--color-btn-jour-1);
 }
 
 body.nuit .dropdown-content li a:hover {
@@ -138,12 +133,7 @@ nav button.dropbtn::after {
   bottom: -6px;
   width: 0%;
   height: 2px;
-    background: linear-gradient(
-    135deg,
-    #9ed697 0%,
-    #b8e6b2 50%,
-    #ffffff 100%
-  );
+  background-color: var(--color-btn-jour-1);
   transition: width 0.3s ease;
 }
 
@@ -373,6 +363,10 @@ nav button.dropbtn[aria-expanded="true"]::after {
   cursor: pointer;
   padding: 4px;
   position: fixed;
+  position:sticky
+  top: 16px;
+  right: 16px;
+  z-index: 3000;
 }
 
 #modeNuitButton img {
