@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('btn-passions');
-  const menu = document.getElementById('menu-passions');
+  const btn = document.getElementById('menu-btn'); // anciennement btn-passions
+  const menu = document.getElementById('mobile-menu'); // anciennement menu-passions
   if (!btn || !menu) { console.error('btn/menu manquant'); return; }
 
   const openMenu = () => {
@@ -65,6 +65,6 @@ window.addEventListener("scroll", () => {
 // Focus au load
 window.addEventListener("load", () => {
   if (document.activeElement) document.activeElement.blur();
-  const btn = document.getElementById("btn-passions");
+  const btn = document.getElementById("menu-btn"); // adapté au nouvel ID
   if (btn) btn.blur();
 });

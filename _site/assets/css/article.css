@@ -2,6 +2,10 @@ h1 {
   font-size: 4vh;
 }
 
+body.nuit h1 {
+  color: #8B9CFF;
+}
+
 h3 {
   margin-bottom: 4vh;
 }

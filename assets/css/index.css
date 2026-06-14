@@ -38,18 +38,6 @@ body.nuit #profil h1 {
 
 /*IMAGES*/
 
-#bin {
-  z-index: 1;
-  width: 40vw;
-  height: 80vh;
-  border-radius: 10px;
-  top: 0;
-  right: 10vw;
-  position: absolute;
-
-  opacity: 0.01;
-  filter: blur(2px);
-}
 #profil-img {
   z-index: 2;
   width: 50vw;
@@ -432,6 +420,10 @@ body.nuit {
   font-size: 2rem;
   margin-bottom: 3rem;
   color: black;
+}
+
+body.nuit .skills-flow h2 {
+  color: #8B9CFF;
 }
 
 /* Conteneur pour le zigzag */

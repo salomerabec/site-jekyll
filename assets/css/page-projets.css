@@ -2,11 +2,20 @@ body{
   background:  var(--body-jour);
 }
 
+body.nuit {
+  background: var(--color-nuit-background);
+}
+
 .page-projets {
   min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.page-projets h2{
+  margin-top: 90px;
+  margin-bottom: 30px;
 }
 
 
@@ -16,6 +25,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 
 
 
@@ -65,6 +75,11 @@ body{
   box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
 }
 
+body.nuit #searchBar:focus,
+body.nuit #filterTags:focus {
+  border-color: var(--color-nuit-1);
+  box-shadow: 0 0 0 4px rgba(var(--color-btn-nuit-border-rgb), 0.15);
+}
 
 
 
@@ -248,6 +263,10 @@ body.nuit section#page-projets h3 {
   color: #8B9CFF;
 }
 
+body.nuit section#page-projets h2 {
+  color: #8B9CFF;
+}
+
 /*GRID SUR MOBILE*/
 
 @media (max-width: 768px) {
@@ -259,3 +278,5 @@ body.nuit section#page-projets h3 {
     width: 100%;
   }
 }
+
+

@@ -6,6 +6,10 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.contact h2{
+margin-bottom: 30px;
+}
+
 body.nuit .contact {
   background:var(--color-nuit-background);
 }
@@ -17,7 +21,7 @@ body.nuit .contact {
   width: 60px;
   height: 4px;
   background-color: var(--color-btn-jour-1);
-  margin: 25px auto 0;
+  margin: 60px auto 0;
   border-radius: 2px;
 }
 

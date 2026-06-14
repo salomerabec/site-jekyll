@@ -20,6 +20,10 @@ nav {
 
   border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: height 0.3s ease, backdrop-filter 0.3s ease;
+  width: 100vw;
+  left: 0;
+  margin: 0 !important;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -363,7 +367,7 @@ nav button.dropbtn[aria-expanded="true"]::after {
   cursor: pointer;
   padding: 4px;
   position: fixed;
-  position:sticky
+  position:sticky;
   top: 16px;
   right: 16px;
   z-index: 3000;
